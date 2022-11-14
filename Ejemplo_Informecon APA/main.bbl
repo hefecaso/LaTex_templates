@@ -1,0 +1,53 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Einstein%
+}{%
+Einstein%
+}{%
+{\protect \APACyear {1905}}%
+}]{%
+Einstein}
+\APACinsertmetastar {%
+Einstein}%
+\begin{APACrefauthors}%
+Einstein, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1905}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Zur Elektrodynamik bewegter K{\"o}rper}. ({German})
+  [{On} the electrodynamics of moving bodies]} {{Zur Elektrodynamik bewegter
+  K{\"o}rper}. ({German}) [{On} the electrodynamics of moving bodies]}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Annalen der Physik}{322}{10}{891--921}.
+\newblock
+\begin{APACrefDOI} \doi{http://dx.doi.org/10.1002/andp.19053221004}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Greenwade%
+}{%
+Greenwade%
+}{%
+{\protect \APACyear {1993}}%
+}]{%
+greenwade93}
+\APACinsertmetastar {%
+greenwade93}%
+\begin{APACrefauthors}%
+Greenwade, G\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1993}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The {C}omprehensive {T}ex {A}rchive {N}etwork ({CTAN})}
+  {The {C}omprehensive {T}ex {A}rchive {N}etwork ({CTAN})}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{TUGBoat}{14}{3}{342--351}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

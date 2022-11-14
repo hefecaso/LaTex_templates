@@ -1,0 +1,66 @@
+En el preámbulo del documento dar:
+
+%Cambiar Cuadros por Tablas y lista de...
+\renewcommand{\listtablename}{Índice de tablas}
+\renewcommand{\tablename}{Tabla}
+
+En general para cambiar cualquier nombre:
+
+\renewcommand{\<thingname>}{Res minor}
+
+\abstractname Abstract
+\alsoname see also (makeidx package)
+\appendixname Appendix
+\bibname Bibliography (report,book)
+\ccname cc (letter)
+\chaptername Chapter (report,book)
+\contentsname Contents
+\enclname encl (letter)
+\figurename Figure (for captions)
+\headtoname To (letter)
+\indexname Index
+\listfigurename List of Figures
+\listtablename List of Tables
+\pagename Page (letter)
+\partname Part
+\refname References (article)
+\seename see (makeidx package)
+\tablename Table (for caption)
+
+
+\renewcommand
+
+deben ir luego de \begin{document} no en el preámbulo.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\caption en FIGURE y TABLE
+Al usar el comando \caption{Título de la figura o tabla} dentro de los entornos figure o table (los que se usan para generar entornos flotantes en el documento), se producen por defecto las líneas:
+
+Figura 8: Título de la figura o tabla.
+Cuadro 6: Título de la figura o tabla.
+
+Por ejemplo, si han usado el \usepackage[spanish]{babel}.
+
+¿Es posible cambiar "Figura" y "Cuadro" por otras palabras?
+¿Es posible cambiar la numeración simple 1,2,3,4, etc. dada por defecto?
+
+La respuesta es SI.
+
+Cuando se necesita hacer un documento extenso, con muchas secciones es preferible numerar las figuras (o tablas) de acuerdo a la sección donde se encuentra dicha figura o tabla. Por ejemplo, tener una numeración de la forma "Figura X.Y" donde X es la sección actual e Y corresponde a la posición de la figura en la sección X.
+Además, es posible cambiar las palabras Figura por Fig. y Cuadro por Tabla en los \caption.
+
+Sólo se necesita declarar algunos comandos.
+Primero, en el preámbulo se necesita \usepackage{amsmath}
+Luego, después de \begin{document} deben poner:
+
+\renewcommand{\figurename}{Fig.} %Cambia la palabra "Figura" por "Fig."
+\renewcommand{\tablename}{Tabla} %Cambia la palabra "Cuadro" por "Tabla"
+\renewcommand\thefigure{\arabic{section}.\arabic{figure}} % Genera numeración X.Y
+\renewcommand\thetable{\arabic{section}.\arabic{table}} % Genera numeración X.Y
+\numberwithin{figure}{section} %Hace que la primera figura de cada sección X sea X.1
+\numberwithin{table}{section} %Hace que la primera tabla de cada sección X sea X.1
+
+Espero les sirva.
+Saludos.

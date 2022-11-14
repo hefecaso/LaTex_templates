@@ -1,0 +1,10 @@
+\begin{table}[H] % Iniciamos tabla con parametro H
+\begin{center}	 %Centramos la tabla
+
+	<Aquí va la tabla> %Agregamos la tabla con \begin{tabular}
+
+\caption{Pie de tabla} %Aquí colocamos pié de página
+\centering{Fuente: } %Agregamos la fuente de donde se adquirió
+\label{Etiqueta} %La etiqueta para poder referenciarla más adelante
+\end{center} 
+\end{table}

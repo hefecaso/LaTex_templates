@@ -1,0 +1,14 @@
+%El siguiente paquete, nos premite escribir código directamente desde LaTex
+\usepackage{listings}
+
+\lstset{language=C, breaklines=true, basicstyle=\footnotesize}
+\begin{lstlisting}[frame=single]
+#include <stdio.h>
+#include <stdlib.h>
+// programa muy positivo
+
+void main{
+  system("clear");
+  printf("Hola mundo!\n");
+}
+\end{lstlisting}

@@ -1,0 +1,167 @@
+%[Tamaño de letra, tipo de hoja, número de columnas]{tipo de documento}
+\documentclass[12pt,letterpaper, onecolumn]{article}
+
+
+
+%Decodificación para el lenguaje español y caracteres especiales.
+\usepackage[utf8]{inputenc} 
+
+%Definimos que trabajaremos en idioma español y el tipo de letra.
+\usepackage[spanish]{babel}
+
+%mejoras para mejorar la estructura de la información y la salida impresa de documentos que contienen fórmulas matemáticas.
+\usepackage{amsmath}
+
+%El paquete amsfonts brinda una colección de fuentes TeX adicionales diseñadas para su uso en material matemático con AmS-TeX.
+\usepackage{amsfonts}
+
+%El paquete amssymb permite usar símbolos especiales.
+\usepackage{amssymb}
+
+%Proporciona un índice ordenado a partir de datos sin procesar sin clasificar.
+\usepackage{makeidx}
+
+%El paquete se basa en el paquete de gráficos , proporcionando una interfaz clave-valor para argumentos opcionales para el comando \ includegraphics .
+\usepackage{graphicx}
+
+%El paquete float es importante para las imágenes con la opción [H] para que las imágenes se coloquen en donde lo deseamos
+\usepackage{float}
+
+%A continuación vamos a definir los márgenes de nuestro documento con geometry
+\usepackage[left=3cm,right=1.5cm,top=1.5cm,bottom=1.5cm]{geometry}
+
+%Este paquete permite cambiar las formas de enumerar items.
+\usepackage{enumerate}
+
+%<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>
+%Agregaremos el siguiente paquete para cambiar el número de columnas (El menor número será el que definamos al inicio del documento)
+\usepackage{multicol}
+
+%\begin{multicols}{2}
+
+%\end{multicols}
+%<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>
+
+%A continuación veremos como podemos agregar un encabezado en nuestro documento:
+%>>>>>>>>>>Forma para un solo autor
+%\title{\LaTeX \hspace{0.1cm} en farmacia}
+%\author{Departamento de química orgánica}
+%\date{\today}
+
+%>>>>>>>>>>Forma para varios autores
+
+%Primero incluimos el paquete authblk: El paquete redefine el comando \ author para que funcione normalmente o para permitir un estilo de nota al pie de entrada de autor / afiliación.
+\usepackage{authblk}
+
+
+% El comando \ balance se puede utilizar para equilibrar las columnas en la página final si se desea. Debe colocarse en cualquier lugar dentro de la primera columna de la última página.
+\usepackage{balance}
+
+\usepackage[table,xcdraw]{xcolor}
+%\hspace es para espacio horizontales
+\title{Tarea \#1}
+
+\author[1]{Carmen Lucía Vásquez Maldonado \thanks{clvm.21@gmail.com}}
+
+\author[1]{Federico Tzunux Tzoc
+\thanks{fedetzunux10@gmail.com}}
+
+\author[2]{Werner Omar Chanta Bautista}
+
+%Agregamos afiliaciones y los enúmeramo [x]
+
+\affil[1]{Universidad de San Carlos de Guatemala, Departamento de Química Orgánica.}
+
+\affil[2]{Universidad de San Carlos de Guatemala.}
+
+\date{15 de octubre de 2021}
+
+
+
+%Con esto agregamos la fecha.
+\date{\today}
+
+%Paquete para configurar medidas de las tablas
+\usepackage{tabularx}
+
+%Para colocar hiperlinks \href{url}{text}
+\usepackage[pdftex]{hyperref}
+
+%<<<<<<<<< para saltos de página usar  \clearpage >>>>>
+%<<<<<<<<< para saltos entre líneas usar \vspace{2cm}>>>>>
+
+%<<<<<<<<< para espaciado horizontal \hspace{1cm}>>>>>
+
+%<<<<<<<<< para colocar url o referencias a url usar \url{http://www.latex-project.org/} o  \href{http://www.latex-project.org/}{latex project}>>>>>>>
+
+
+\begin{document}
+\maketitle
+
+\section{Ejercicio \# 1}
+
+Para definir un documento y sus características, sean estas, el tipo de letra, tamaño de letra, etc,  se utiliza el comando: 
+
+\begin{verbatim}
+\documentclass[]{}
+\end{verbatim}
+
+Para mas información dar click: 
+\href{https://es.wikibooks.org/wiki/Manual_de_LaTeX/La_estructura_de_un_documento_en_LaTeX/Pre\%C3\%A1mbulo/Clases_de_documento}{AQUI}.
+Sin embargo la facilidad que ofrece Overleaf, es poder hacer uso de plantillas preestablecidas, lo cual facilita el trabajo. A partir de lo explicado en el taller y de la información obtenida en el link, describir y dar un ejemplo de las diferencias entre un documento tipo ''article'' y otro tipo ''book''. Puede usar este código de guía y ver como comporta el documento,  al cambiar la palabra book por article.
+
+
+\begin{verbatim}
+\documentclass{book}
+
+\title{\Huge Composición de textos con \LaTeX}
+\author{El que hace la tarea}
+\date{}
+
+\begin{document}
+\maketitle
+ 
+%el cuerpo del documento va acá 
+
+\end{document}
+\end{verbatim}
+
+\clearpage
+
+\section{Ejercicio \# 2}
+
+Uso de los paquetes, cada paquete le da características nuevas al documento, que pasa por agregar el uso del idioma español, hasta permitir ingresar links de paginas web, es decir, latex funciona con módulos, esto da opciones ilimitadas. Sabiendo lo anterior, se pide crear una plantilla que sea tipo articulo, que permita trabajar en dos columnas, ingresar ecuaciones. Para una guía básica de paquetes click 
+\href{https://manualdelatex.com/tutoriales/paquetes}{AQUI}. Puede usar el código proporcionado en el apartado uno.
+
+\section{Ejercicio \# 3}
+
+Usando el código del apartado uno y lo aprendido en el taller agregue a mas autores al documento, cada autor debe tener nombre y correo.
+
+
+%\newpage
+\section{Ejercicio \# 4}
+
+Las tablas en látex tiene la facilidad de poder modificarse a gusto, como la tabla siguiente:
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\multicolumn{3}{|c|}{\textbf{Los números}}                         \\ \hline
+\cellcolor[HTML]{34CDF9}uno & dos   & tres                         \\ \hline
+cuatro                      & cinco & \cellcolor[HTML]{F8FF00}seis \\ \hline
+\end{tabular}
+\end{table}
+
+El color en la tabla se ha agregado usando el paquete 
+\begin{verbatim}
+    \usepackage[table,xcdraw]{xcolor}
+\end{verbatim}
+ 
+ Usando el comando caption, agregue descripción a la tabla, además intente modificar la tabla para que se pueda agregar una imagen en alguno de los cuadros, utilice lo aprendido en el taller. Como ayuda, puede usar el generador de tablas online para latex, \href{https://www.tablesgenerator.com}{dar click acá} \\ \\
+
+
+
+
+
+\end{document}

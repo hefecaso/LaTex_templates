@@ -1,0 +1,20 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Pr\IeC {\'o}logo}{2}{section.1}
+\contentsline {section}{\numberline {2}Introducci\IeC {\'o}n}{4}{section.2}
+\contentsline {section}{\numberline {3}Electr\IeC {\'o}nica de potencia, tecnolog\IeC {\'\i }a para un futuro sostenible}{5}{section.3}
+\contentsline {section}{\numberline {4}Las energ\IeC {\'\i }as renovables}{6}{section.4}
+\contentsline {subsection}{\numberline {4.1}Revoluci\IeC {\'o}n en la energ\IeC {\'\i }a renovable}{6}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Energ\IeC {\'\i }a e\IeC {\'o}lica}{8}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}La energ\IeC {\'\i }a solar}{9}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Tipos de energ\IeC {\'\i }a solar}{10}{subsubsection.4.3.1}
+\contentsline {paragraph}{Fotovoltaica:}{10}{section*.2}
+\contentsline {paragraph}{T\IeC {\'e}rmica:}{10}{section*.3}
+\contentsline {paragraph}{Solar pasiva:}{10}{section*.4}
+\contentsline {subsection}{\numberline {4.4}Energ\IeC {\'\i }a hidr\IeC {\'a}ulica}{11}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Biomasa y biog\IeC {\'a}s}{13}{subsection.4.5}
+\contentsline {paragraph}{La biomasa puede ser:}{13}{section*.5}
+\contentsline {subsection}{\numberline {4.6}Energ\IeC {\'\i }a geot\IeC {\'e}rmica}{13}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}Energ\IeC {\'\i }a mareomotriz}{14}{subsection.4.7}
+\contentsline {subsection}{\numberline {4.8}Energ\IeC {\'\i }a undimotriz u olamotriz}{16}{subsection.4.8}
+\contentsline {section}{\numberline {5}Los dispositivos de potencia}{16}{section.5}
+\contentsline {section}{\numberline {6}Los componentes de potencia de SiC y GaN para abordar los requisitos de dise\IeC {\~n}o de los EV}{18}{section.6}

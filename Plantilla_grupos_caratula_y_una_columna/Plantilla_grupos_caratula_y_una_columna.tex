@@ -1,0 +1,386 @@
+%Autor: Héctor Fernando Carrera Soto
+%Correo: hfcarrerasoto.usac@gmail.com
+%Universidad de San Carlos
+%Ingeniería electrónica
+%-------------------------Paquetes---------------------------------------------
+
+\documentclass[osajnl,showpacs,superscriptaddress,10pt]{article}
+%
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%
+%Paquete de Idioma
+\usepackage[spanish]{babel}
+%
+%Codificación Alfabeto
+\usepackage[utf8]{inputenc}
+%
+%Codificación de Fuente
+\usepackage[T1]{fontenc}
+%
+%Índice
+\usepackage{makeidx}
+%
+%Gráficos
+\usepackage{graphicx}
+\usepackage{subfig}
+%\usepackage{xcolor} 
+%
+%Matemática
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{amstext} 
+%
+%Estilo de Página Numeración superior
+%\pagestyle{headings}
+%
+%Hiperlinks \href{url}{text}
+\usepackage[pdftex]{hyperref}
+%
+%Graficos y tablas
+\usepackage{multirow}
+\usepackage{multicol,lipsum,xparse}
+\usepackage{float}
+\usepackage{booktabs}
+%
+\decimalpoint
+%\bibliographystyle{IEEEtran}
+%\bibliography{IEEEabrv,mybibfile}
+%Para tachar dimencionales
+\usepackage{cancel}
+\usepackage{anysize}
+\marginsize{2.5cm}{2.5cm}{1cm}{2cm}
+%
+%
+
+%>>>>>>>>>>>>>>>>>>Esto es para interlineado<<<<<<<
+%\setlength{\parskip}{5mm}
+
+%si quiero que la distancia extra entre párrafos sea la misma que el interlineado, puedo escribir, simplemente:
+
+%\setlength{\parskip}{\baselineskip}
+
+
+
+
+%>>>>>>>>>>>>>>>>>>Esto es para la sangría<<<<<<<
+%\setlength{\parindent}{0.75cm}
+%>>>>>>>>>>>Reducir espaciado de los items<<<<<<<
+%\let\olditemize\itemize
+%\def\itemize{\olditemize\itemsep=0mm }
+
+%>>>>>>>>>>>Margenes generales<<<<<<<
+%\usepackage[a4paper]{geometry}
+%\geometry{top=2.5cm, bottom=2.5cm, left=1.25cm, right=1.25cm}
+
+%%>>>>>>>>>>>Reducir espaciado de los items<<<<<<<
+%\let\olditemize\itemize
+%\def\itemize{\olditemize\itemsep=0mm }
+%
+
+
+%<<<<<<<<< para saltos de página usar  \clearpage >>>>>
+%<<<<<<<<< para saltos entre líneas usar \vspace{2cm}>>>>>
+%<<<<<<<<< para espaciado horizontal \hspace{1cm}>>>>>
+%<<<<<<<<< para colocar url o referencias a url usar \url{http://www.latex-project.org/} o  \href{http://www.latex-project.org/}{latex project}>>>>>>>
+
+
+%<<<<<<<<< Configuraciónes en las tablas >>>>>
+%Paquete para configurar medidas de las tablas
+\usepackage{tabularx}
+%Forma del comando
+%\begin{tabular}{|m{0.22\linewidth}|m{0.22\linewidth}|}
+
+
+\begin{document}
+
+%----------------------------Datos de estudiantes--------------------------------
+
+%Titulo
+
+{\small
+\begin{tabular}{p{0.70\textwidth} p{0.45\textwidth} }
+\includegraphics[scale=0.2]{escudo_usac.png} &  \includegraphics[scale=0.33]{logo-fiusac.png}
+\end{tabular}
+}
+
+\vspace{4cm}
+
+\begin{center}
+\begin{Large}
+Universidad de San Carlos de Guatemala
+\end{Large}
+\end{center}
+
+
+
+\begin{center}
+\begin{Huge}
+\textbf{Laboratorio No. n}
+\textbf{Título de la práctica}
+\end{Huge}
+\end{center}
+
+
+
+\begin{center}
+\begin{normalsize}
+Facultad de Ingeniería\\
+Escuela de ingeniería mecánica eléctrica\\
+Laboratorio de circuitos 1\\
+Catedrático: Ing. Julio Rolando Barrios Archila\\
+Sección C1, grupo 2\\
+\end{normalsize}
+\end{center}
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{c c}
+\hline 
+Nombre y apellido & Carnet \\ 
+\hline 
+Nombre y apellido & Carnet \\ 
+\hline 
+Nombre y apellido &  Carnet \\ 
+\hline 
+Nombre y apellido & Carnet \\ 
+\hline 
+Nombre y apellido & Carnet \\ 
+\hline 
+\end{tabular} 
+\end{center}
+\end{table}
+
+
+
+\begin{center}
+\textbf{Fecha de realización de la práctica : DD de Mes del AAAA}
+\end{center}
+\begin{center}
+\textbf{Fecha de entrega: DD de Mes del AAAA}
+\end{center}
+
+
+
+
+\clearpage
+
+
+%------------------------------Objetivos-----------------------------------------
+\section{Resumen}
+
+
+El resumen debe estar dividido en tres párrafos, respondiendo a las siguientes interrogantes:\
+
+Qué se hizo.
+Cómo se hizo.
+A qué se llegó y bajo qué condiciones.\
+
+Todas las interrogantes deben referirse al reporte y no a lo realizado en el Laboratorio, a
+excepción de algún procedimiento que pudo haber influido sobre los resultados y las condiciones de
+trabajo. Recuerda que no se colocan las interrogantes, únicamente se contestan a ellas en los
+párrafos referidos.
+
+
+ %----------------------------Marco teórico-------------------------------------
+\section{Resultados}
+
+Todos resultados deben ser presentados únicamente en tablas. Gráficos sólo serán reportados cuando se te solicite, de lo contrario no colocar gráficos. Las tablas se nombrarán como Tabla 1.\
+
+Nombre de la tabla. según sea el caso; y los gráficos como Figura 1. Nombre de la figura. según
+sea el caso. Recordar que desde esta sección se inicia a numerar y nombrar tablas y figuras (gráficos). \
+
+Es importante que puedas agrupar tu información en la cantidad de tablas que consideres
+necesarias, pero debes cumplir con los objetivos de la práctica.
+
+
+%>Cuadro agua
+\begin{table}[H]
+\begin{center} 
+ \begin{tabular}{|c|c|c|} 
+	\hline
+	\multicolumn{3}{ |c| }{Agua} \\ 		
+	\hline 	
+   Media masa $(g)$ & Error Absoluto & Error relativo $\%$ \\ 
+   \hline 
+   121.528
+    & 2.315
+    & 1.90
+    \\ 
+   \hline 
+   \end{tabular}   
+\end{center}
+\caption{Fuente propia.}
+\label{tabla_1_h2o}
+\end{table}
+
+
+%>Cuadro miel
+\begin{table}[H]
+\begin{center} 
+ \begin{tabular}{|c|c|c|} 
+	\hline
+	\multicolumn{3}{ |c| }{Miel} \\ 		
+	\hline 	
+   Media masa $(g)$ & Error Absoluto & Error relativo $\%$ \\ 
+   \hline 
+   110.411
+    & 2.726
+    & 2.47
+    \\ 
+   \hline 
+   \end{tabular}   
+\end{center}
+\caption{Fuente propia.}
+\label{tabla_1_miel}
+\end{table}
+
+%>Cuadro aceite
+\begin{table}[H]
+\begin{center} 
+ \begin{tabular}{|c|c|c|}
+	\hline
+	\multicolumn{3}{ |c| }{Aceite} \\ 		
+	\hline 	
+   Media masa $(g)$ & Error Absoluto & Error relativo $\%$ \\ 
+   \hline 
+   171.522
+    & 2.970
+    & 1.73
+    \\ 
+   \hline 
+   \end{tabular}   
+\end{center}
+\caption{Fuente propia.}
+\label{tabla_1_aceite}
+\end{table}
+
+%---------------------------Diseño experimental----------------------------------
+\section{Interpretación de resultados}
+
+
+Para la interpretación de resultados debes colocar un párrafo por cada tabla y/o por cada figura que aparezca en la sección de Resultados .\
+
+Recuerda que en esta sección debes cuestionar los resultados obtenidos, no describirlos.\ 
+
+Tu interpretación dependerá de cuánta información leíste acerca de la temática del reporte. \
+
+No debes colocar teoría directamente, debes utilizarla como respaldo de tus resultados y así poderlos
+cuestionar, pues esta área no es una investigación.
+
+
+%--------------------------------Mateiales---------------------------------------
+\section{Conclusiones}
+
+Las conclusiones deben ser concretas y específicas. Estas se realizan en función de los objetivos de la práctica.
+
+
+%-----------------------Magnitudes físicas a medir-------------------------------
+\section{Apendice}
+
+\subsection{Procedimiento}
+
+Debes colocar la información que aparece en tu instructivo. Recuerda que debe estar escrito en pasado y en forma impersonal (se midió, se observó, etc.) y no en forma imperativa (mida, observe, etc.).\
+
+Todos los pasos deben estar numerados y debes omitir los pasos que fueron obviados según
+instrucciones del instructor.
+
+
+%------------------------------Muestra de cálculo-------------------------------------
+
+\subsection{Muestra de cálculo}
+
+En esta sección se deben incluir todos los cálculos del reporte, a excepción de cálculos de Análisis de Error, entre los que se pueden mencionar Error Relativo y Absoluto, Desviación Estándar, Q de Dixon , Límites de Confianza, entre otros.\
+
+Solo debes colocar un ejemplo por cada ecuación que aparezca en esta sección. Por ejemplo si la ecuación de la media o promedio la utilizaste en varios casos (mediciones de masa, de temperatura, tiempo, etc.) solo debes colocar un ejemplo. Para ecuaciones de estadística de medidas de tendencia central (media, desviación estándar, varianza, Q de Dixon, entre otros) utiliza las ecuaciones genéricas, como en el ejemplo 6.3.1 de la Figura 5.
+
+
+
+%-------------------------Volúmen estimado--------------------------------
+
+\subsubsection{Ejemplo de ecuación Volúmen total estimado por corrida}
+
+
+Para encontrar el volúmen total estimado vertido para llenar media taza se utilizó una regla de trés para encontrar el total de volúmen posible total por cada corrida de los distintos fluidos. Se utilizó la mayor cantidad de veces que se vertió el fluido para media taza como el $100 \%$ necesario para llegar a los 125 $\dfrac{g}{cm^{3}}$.
+
+
+
+\[\frac{C_{M}}{V_{mT}} =  \frac{C_{T}}{V_{T}} \]
+
+
+Despejando:
+
+
+\begin{equation}
+V_{T} (C_{T}) = \dfrac{C_{T}}{C_{M}/V_{mT}}
+\label{Ec_volúmen}
+\end{equation}
+
+
+Dónde:\\
+$V_{T} =$ Volúmen total de la corrida.\\
+$C_{T} =$ Cantidad de veces total vertido.\\
+$C_{M} =$ Cantidad mayor de veces vertida.\\
+$V_{mT} =$ Volúmen de media una taza.\\
+
+
+
+Utilizando la ecuación número \ref{Ec_volúmen} para el calculo del segundo volúmen total estimado que fue vertido en la segunda corrida para el $H_{2}O$.
+
+
+\[V_{T} (23) = \dfrac{23}{26/125} = 119.792 \dfrac{g}{cm^{3}}\]
+
+%Salto de página
+\clearpage
+
+
+\subsubsection{Aquí van las sigientes ecuaciónes}
+
+
+
+
+
+%-----------------------Discusión de resultados----------------------------------
+
+\section{Análisis de Error}
+
+Análisis de Error En esta sección se colocarán todos cálculos de Error Relativo, Error Absoluto, Desviación Estándar, Q de Dixon, Límites de Confianza, entre otros. Además se incluirá una tabla de las incertezas de los instrumentos y equipo utilizado para realizar la práctica.\
+
+El Análisis de Error es prácticamente una Muestra de Cálculo, con la diferencia que en esta sección se colocan los cálculos mencionados anteriormente.
+
+
+%-----------------------------Conclusiones---------------------------------------
+\section{Datos calculados}
+
+En esta sección se agrupan en tablas y de forma ordenada los resultados de todos los cálculos de las secciones Muestra Cálculo y Análisis de Error. No se deben colocar ecuaciones o datos originales en esta sección.
+
+
+%----------------------------Bibliografías---------------------------------------
+\begin{thebibliography}{99}
+%Se utilizará el formato propuesto por la Norma ISO 690. Se deben colocar como mínimo 3 bibliografías o e­grafías, las cuales deben estar en orden alfabético y numeradas.
+
+
+\bibitem{} Conversión-Cocinando Vengo.pdf. (s/f).
+Conversor de unidades cocina, gramos, ml, cl, onzas, tazas, vasos, etc. (s/f). Recuperado el 29 de agosto de 2020, de \url{https://cocinandovengo.com/conversor-unidades/#listado}
+
+\bibitem{} CALCULO DE ERRORES. (2015, marzo 25). \url{https://www.youtube.com/watch?v=OW1C7wexP-U}
+
+\bibitem{} Rúbrica Desidad 22020.xlsx - Google Drive. (s/f). Recuperado el 29 de agosto de 2020, de \url{https://drive.google.com/file/d/1tciMhh6R8BUhZZhnUhxkFiag_SLjLrBD/view}
+
+\bibitem{} MORALES, Eddy . Cómo reportar LabQG1. Facultad de Ingeniería,
+Universidad de San Carlos de Guatemala, Guatemala. 2015.
+
+\bibitem{}  US, P. Javier. Cómo reportar LabQG1. Facultad de Ingeniería, Universidad
+de San Carlos de Guatemala, Guatemala. 2015.
+
+\bibitem{} FORMULARIO DE ESTADISTICA 1. (s/f). 10. Universidad de San Carlos de Guatemala, Guatemala. 2020.
+
+
+
+\end{thebibliography}
+
+
+
+\end{document}

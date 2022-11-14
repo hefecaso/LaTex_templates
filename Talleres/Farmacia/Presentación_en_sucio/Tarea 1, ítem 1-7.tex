@@ -1,0 +1,144 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage[left=3cm,right=1.5cm,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{enumerate}
+\usepackage[hidelinks]{hyperref}
+\usepackage[table,xcdraw]{xcolor}
+
+\title{\LaTeX \hspace{0.1cm} en farmacia}
+\author{Departamento de química orgánica}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Lista de temas:}
+
+\subsection{Un poco de teoría}
+
+\begin{enumerate}
+    \item ¿Qué es Latex?
+    \item ¿Por qué usar Latex?
+    \item Ventajas de Latex sobre Word
+\end{enumerate}
+
+\section{Parte práctica}
+
+\begin{enumerate}
+    \item Creando un nuevo documento.
+    \item Uso de los paquetes.
+    \item Añadiendo a varios autores.
+    %--------------------------------------------------
+    \item Colocando tablas
+        \begin{enumerate}
+            \item Colocando una tabla normal con tamaños de celdas definidas.
+            
+            \item Definiendo diferentes parámetros de alineaciones al colocar texto en las tablas.
+            
+            \item Parámetros para fijar una tabla.
+            
+            \item Colocar una figura dentro de una tabla.
+        \end{enumerate}
+    %--------------------------------------------------
+    \item Ecuaciones
+        \begin{enumerate}
+            \item Como insertar ecuaciones dentro de un texto y fuera del mismo.
+            \item Alineación y Enumeración de ecuaciones.
+            \item Fracciones.
+            \item Raíces y Exponentes
+            \item Signos de Agrupación
+        \end{enumerate}
+    %--------------------------------------------------
+    \item Iniciando con la recopilación de un reporte, proporcionado por la escuela de farmacia. Autores originales: (Tzoc et al., 2020).
+    
+    \item Insertando secciones a dos columnas en un documento de una columna.
+    
+    \item Explicando las subsection, subsubsection y subsubsubsection.
+    
+    \item Insertando items.
+    %--------------------------------------------------
+    \item Regresando a una columna el documento.
+    
+    \item Explicando como insertar figuras y sus configuraciones, importancia de los label y los caption.
+    
+    \item Explicando como realizar anotaciónes, pié de página, referencia a figuras y tablas, citar, url y href.
+    
+    \item Explicando enumerate y configuraciónes.
+    
+    \item Insertar bibliografía
+    
+    \item Como citar una bibliografía.
+\end{enumerate}
+
+
+\section{Ejercicios asignados por tema}
+
+1. Para definir un documento y sus características, sean estas, el tipo de letra, tamaño de letra, etc,  se utiliza el comando: 
+
+\begin{verbatim}
+\documentclass[]{}
+\end{verbatim}
+
+Para mas información dar click: 
+\href{https://es.wikibooks.org/wiki/Manual_de_LaTeX/La_estructura_de_un_documento_en_LaTeX/Pre\%C3\%A1mbulo/Clases_de_documento}{AQUI}.
+Sin embargo la facilidad que ofrece Overleaf, es poder hacer uso de plantillas preestablecidas, lo cual facilita el trabajo. A partir de lo explicado en el taller y de la información obtenida en el link, describir y dar un ejemplo de las diferencias entre un documento tipo "article" y otro tipo "book". Puede usar este código de guía y ver como comporta el documento,  al cambiar la palabra book por article.
+
+
+\begin{verbatim}
+\documentclass{book}
+
+\title{\Huge Composición de textos con \LaTeX}
+\author{El que hace la tarea}
+\date{}
+
+\begin{document}
+\maketitle
+ 
+%el cuerpo del documento va acá 
+
+\end{document}
+\end{verbatim}
+
+2. Uso de los paquetes, cada paquete le da características nuevas al documento, que pasa por agregar el uso del idioma español, hasta permitir ingresar links de paginas web, es decir, latex funciona con módulos, esto da opciones ilimitadas. Sabiendo lo anterior, se pide crear una plantilla que sea tipo articulo, que permita trabajar en dos columnas, ingresar ecuaciones. Para una guía básica de paquetes click 
+\href{https://manualdelatex.com/tutoriales/paquetes}{AQUI}. Puede usar el código proporcionado en el apartado uno.
+
+3. Usando el código del apartado uno y lo aprendido en el taller agregue a mas autores al documento, cada autor debe tener nombre y correo.
+
+
+\newpage
+4. Las tablas en látex tiene la facilidad de poder modificarse a gusto, como la tabla siguiente:
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\multicolumn{3}{|c|}{\textbf{Los números}}                         \\ \hline
+\cellcolor[HTML]{34CDF9}uno & dos   & tres                         \\ \hline
+cuatro                      & cinco & \cellcolor[HTML]{F8FF00}seis \\ \hline
+\end{tabular}
+\end{table}
+
+El color en la tabla se ha agregado usando el paquete 
+\begin{verbatim}
+    \usepackage[table,xcdraw]{xcolor}
+\end{verbatim}
+ 
+ Usando el comando caption, agregue descripción a la tabla, además intente modificar la tabla para que se pueda agregar una imagen en alguno de los cuadros, utilice lo aprendido en el taller. Como ayuda, puede usar el generador de tablas online para latex, \href{https://www.tablesgenerator.com}{dar click acá} \\ \\
+
+5. La ecuaciones y latex, este es uno de los puntos mas fuertes del software, la inserción y facilidad de manejo de ecuaciones, con lo aprendido en clase, haga una lista de 10 reacciones químicas. De Click \href{http://minisconlatex.blogspot.com/2010/11/reacciones-quimicas.html}{AQUI} para tener ejemplos de como insertar reacciones químicas en latex, para ver símbolos matemáticos, ver \href{https://manualdelatex.com/simbolos}{AQUI}
+
+6. Con el Código proporcionado en el apartado 1, defina el documento como article, disponga para que este sea a dos columnas, agregue texto a su elección, al menos una tabla, además inserte la lista de ecuaciones químicas que ha realizado en el apartado anterior. 
+
+
+\end{document}
+
+
+
+
+

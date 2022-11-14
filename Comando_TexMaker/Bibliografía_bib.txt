@@ -1,0 +1,16 @@
+\usepackage{apacite}
+
+%%%%%%%%%%%%%%%%%%%%%
+%	Bibliografías	%
+%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+%Primero darle a F11, luego a F6 y por último compilamos, así veremos la bibliografía, esto cada vez que hagamos una citación en nuestro documento.
+
+\bibliographystyle{apacite}
+\nocite{*} %Descomentar para que genere la bibliografía sin citar
+%\cite{Einstein} Para sitar al final del parrafo citado.
+%\cite[p.10]{Einstein} Para citar al final del parrafo citado con página.
+%\nocite{Einstein} Para mostrar en referencias sin citar.
+\bibliography{bibliografia}
+
+%https://dle.rae.es/mililitro

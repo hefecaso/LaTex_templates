@@ -1,0 +1,121 @@
+%[Tamaño de letra, tipo de hoja, número de columnas]{tipo de documento}
+\documentclass[12pt,letterpaper, onecolumn]{article}
+
+
+
+%Decodificación para el lenguaje español y caracteres especiales.
+\usepackage[utf8]{inputenc} 
+
+%Definimos que trabajaremos en idioma español y el tipo de letra.
+\usepackage[spanish]{babel}
+
+%mejoras para mejorar la estructura de la información y la salida impresa de documentos que contienen fórmulas matemáticas.
+\usepackage{amsmath}
+
+%El paquete amsfonts brinda una colección de fuentes TeX adicionales diseñadas para su uso en material matemático con AmS-TeX.
+\usepackage{amsfonts}
+
+%El paquete amssymb permite usar símbolos especiales.
+\usepackage{amssymb}
+
+%Proporciona un índice ordenado a partir de datos sin procesar sin clasificar.
+\usepackage{makeidx}
+
+%El paquete se basa en el paquete de gráficos , proporcionando una interfaz clave-valor para argumentos opcionales para el comando \ includegraphics .
+\usepackage{graphicx}
+
+%El paquete float es importante para las imágenes con la opción [H] para que las imágenes se coloquen en donde lo deseamos
+\usepackage{float}
+
+%A continuación vamos a definir los márgenes de nuestro documento con geometry
+\usepackage[left=3cm,right=1.5cm,top=1.5cm,bottom=1.5cm]{geometry}
+
+%Este paquete permite cambiar las formas de enumerar items.
+\usepackage{enumerate}
+
+%<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>
+%Agregaremos el siguiente paquete para cambiar el número de columnas (El menor número será el que definamos al inicio del documento)
+\usepackage{multicol}
+
+%\begin{multicols}{2}
+
+%\end{multicols}
+%<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>
+
+%A continuación veremos como podemos agregar un encabezado en nuestro documento:
+%>>>>>>>>>>Forma para un solo autor
+%\title{\LaTeX \hspace{0.1cm} en farmacia}
+%\author{Departamento de química orgánica}
+%\date{\today}
+
+%>>>>>>>>>>Forma para varios autores
+
+%Primero incluimos el paquete authblk: El paquete redefine el comando \ author para que funcione normalmente o para permitir un estilo de nota al pie de entrada de autor / afiliación.
+\usepackage{authblk}
+
+
+% El comando \ balance se puede utilizar para equilibrar las columnas en la página final si se desea. Debe colocarse en cualquier lugar dentro de la primera columna de la última página.
+\usepackage{balance}
+
+%\hspace es para espacio horizontales
+\title{Presentaciónes}
+\author{----}
+\date{\today}
+
+
+
+%Con esto agregamos la fecha.
+\date{\today}
+
+%Paquete para configurar medidas de las tablas
+\usepackage{tabularx}
+
+%Para colocar hiperlinks \href{url}{text}
+\usepackage[pdftex]{hyperref}
+
+%<<<<<<<<< para saltos de página usar  \clearpage >>>>>
+%<<<<<<<<< para saltos entre líneas usar \vspace{2cm}>>>>>
+
+%<<<<<<<<< para espaciado horizontal \hspace{1cm}>>>>>
+
+%<<<<<<<<< para colocar url o referencias a url usar \url{http://www.latex-project.org/} o  \href{http://www.latex-project.org/}{latex project}>>>>>>>
+
+
+\begin{document}
+\maketitle
+
+\section{Werner Omar Chanta Bautista}
+
+Licenciado en Física Aplicada por la Universidad dr San Carlos, Maestría en Física Médica por la Universidad Nacional de Costa Rica
+
+
+
+\section{Carmen Lucía Vásquez Maldonado}
+
+Estudiante de quinto año de la carrera de química, auxiliar del Departamento de Química Orgánica
+
+\section{Federico Tzunux Tzoc}
+
+Estudiante de quinto año de la carrera de química, auxiliar del área Fisicomatemática.
+
+\section{Luis Armando Colorado Sequén}
+Estudiante de décimo semestre de la carrera de Ingeniería Mecánica Eléctrica, miembro de la rama estudiantil de ingenieros eléctricos y electrónicos - USAC y actual vicepresidente del capitulo estudiantil de Electron Devices Society.
+
+
+
+\section{Gerson Alexander Cux García}
+
+Estudiante del noveno semestre de ingeniería electrónica, miembro de la rama estudiantil de ingenieros eléctricos y electrónicos - USAC y actual presidente del capitulo estudiantil de Electron Devices Society.
+
+
+\section{Héctor Fernando Carrera Soto}
+
+
+Estudiante del octavo semestre de ingeniería electrónica, miembro de la rama estudiantil de ingenieros eléctricos y electrónicos - USAC y actual presidente del capitulo estudiantil de Robotics and Automation Society.
+
+
+
+
+
+
+\end{document}

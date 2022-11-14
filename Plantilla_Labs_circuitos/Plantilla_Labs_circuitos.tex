@@ -1,0 +1,286 @@
+%Autor: Héctor Fernando Carrera Soto
+%Correo: hfcarrerasoto.usac@gmail.com
+%Universidad de San Carlos
+%Ingeniería electrónica
+%-------------------------Paquetes---------------------------------------------
+
+\documentclass[osajnl,showpacs,superscriptaddress,10pt]{article}
+%
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%
+%Paquete de Idioma
+\usepackage[spanish]{babel}
+%
+%Codificación Alfabeto
+\usepackage[utf8]{inputenc}
+%
+%Codificación de Fuente
+\usepackage[T1]{fontenc}
+%
+%Índice
+\usepackage{makeidx}
+%
+%Gráficos
+\usepackage{graphicx}
+\usepackage{subfig}
+%\usepackage{xcolor} 
+%
+%Matemática
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{amstext} 
+%
+%Estilo de Página Numeración superior
+%\pagestyle{headings}
+%
+%Hiperlinks \href{url}{text}
+\usepackage[pdftex]{hyperref}
+%
+%Graficos y tablas
+\usepackage{multirow}
+\usepackage{multicol,lipsum,xparse}
+\usepackage{float}
+\usepackage{booktabs}
+%
+\decimalpoint
+%\bibliographystyle{IEEEtran}
+%\bibliography{IEEEabrv,mybibfile}
+%Para tachar dimencionales
+\usepackage{cancel}
+\usepackage{anysize}
+\marginsize{2.5cm}{2.5cm}{1cm}{2cm}
+%
+%
+
+%<<<<<<<<< Configuraciónes en las tablas >>>>>
+%Paquete para configurar medidas de las tablas
+\usepackage{tabularx}
+%Forma del comando
+%\begin{tabular}{|m{0.22\linewidth}|m{0.22\linewidth}|}
+
+
+\begin{document}
+
+%----------------------------Datos de estudiantes--------------------------------
+
+%Titulo
+
+{\small
+\begin{tabular}{p{0.70\textwidth} p{0.45\textwidth} }
+\includegraphics[scale=0.2]{escudo_usac.png} &  \includegraphics[scale=0.33]{logo-fiusac.png}
+\end{tabular}
+}
+
+\vspace{4cm}
+
+\begin{center}
+\begin{Large}
+Universidad de San Carlos de Guatemala
+\end{Large}
+\end{center}
+
+
+
+\begin{center}
+\begin{Huge}
+\textbf{Laboratorio No. n}
+\textbf{Título de la práctica}
+\end{Huge}
+\end{center}
+
+
+
+\begin{center}
+\begin{normalsize}
+Facultad de Ingeniería\\
+Escuela de ingeniería mecánica eléctrica\\
+Laboratorio de circuitos 1\\
+Catedrático: Ing. Julio Rolando Barrios Archila\\
+Sección C1, grupo 2\\
+\end{normalsize}
+\end{center}
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{c c}
+\hline 
+Nombre y apellido & Carnet \\ 
+\hline 
+Nombre y apellido & Carnet \\ 
+\hline 
+Nombre y apellido, &  Carnet \\ 
+\hline 
+Nombre y apellido & Carnet \\ 
+\hline 
+Nombre y apellido & Carnet \\ 
+\hline 
+\end{tabular} 
+\end{center}
+\end{table}
+
+
+
+\begin{center}
+\textbf{Fecha de realización de la práctica : DD de Mes del AAAA}
+\end{center}
+\begin{center}
+\textbf{Fecha de entrega: DD de Mes del AAAA}
+\end{center}
+
+
+
+
+\clearpage
+
+
+
+%------------------------------No tocar-----------------------------------------
+
+\setlength{\columnsep}{1cm}
+\begin{multicols}{2}
+
+%-------------------------------Introducción---------------------------------------
+
+\section{Introducción}
+
+
+La introducción es la base teórica en la que se fundamenta el trabajo y debe presentar
+brevemente el tema tratado.
+Debe incluir una breve revisión de la literatura científica relacionada con el tema. Enfóquese a
+proporcionar información que oriente al lector en el tema y que resalte la importancia del
+trabajo que realizaste. Para lo anterior, utilice un lenguaje claro y concreto del tema que
+abordarás en tu reporte. Debes citar en el texto cada referencia que utilices.
+
+
+
+%-------------------------------Objetivos---------------------------------------
+
+\section{Objetivos}
+
+
+\begin{itemize}
+    \item El objetivo del estudio presenta la meta principal que busca el estudio. Los objetivos deben reflejar la hipótesis que se busca sostener o descartar con los resultados que se obtendrán
+durante la práctica. Generalmente son proporcionados en el instructivo de la práctica en
+mención
+
+
+    \item Objetivo 2
+\end{itemize}
+
+%---------------------------Diseño experimental----------------------------------
+\section{Diseño Experimental}
+
+%--------------------------------Mateiales---------------------------------------
+\subsection{Materiales}
+
+\begin{flushleft}
+En esta sección debe describir cómo se va a llevar a cabo el estudio y explicar la estrategia
+general de tu trabajo.
+Los métodos deben ser lo suficientemente claros para que otra persona pueda seguirlos y
+repetir el trabajo. Esta sección debes listar todos los equipos, instrumentos y materiales
+utilizados para realizar la práctica. Los procedimientos desarrollados deben describirse con
+detalle mediante la elaboración de diagramas de bloques, cuando fuere necesario.\\
+\end{flushleft}
+
+\begin{itemize}
+    \item Item 1
+    \item Item 2
+\end{itemize}
+
+
+\subsection{Diagramas}
+ Aquí van los diagramas de los circuitos
+
+%-------------------------------Resultados---------------------------------------
+
+\section{Resultados}
+En los resultados se muestra objetivamente lo que ocurrió en el estudio. Es una presentación
+gráfica, descriptiva y clara de los resultados. Debes describir y explicar lo que encontraste,
+es decir, los resultados que obtuviste.
+Al describir las observaciones debes indicar la fecha y las condiciones en las que se realizaron
+los procedimientos. Si hubo circunstancias o condiciones inusuales, hay que describirlas. Los
+datos colectados se organizan en Tablas y/o Gráficas, y deben reportarse todos los cálculos y
+operaciones numéricas realizadas.
+Las Tablas presentan datos numéricos en renglones y columnas, mientras que las Figuras son
+generalmente presentaciones gráficas de los datos. Las Tablas y Figuras bien hechas deben
+ser organizadas y auto-explicativas; es mejor usar dos tablas (o figuras) que una sola en la que
+los datos se amontonan. Deben ser consistentes por sí solas, esto es, que se puedan entender
+sin recurrir a un texto adicional.
+Es muy importante acompañar cada Tabla o Figura con el título correspondiente, de manera
+que solo con leerlo pueda saberse de qué se trata. Cuando sea necesario, deben incluirse
+dibujos con títulos y partes, claramente nombradas.
+
+        
+
+%-----------------------Discusión de resultados----------------------------------
+
+\section{Discusión de Resultados}
+
+   El análisis realizado al circuito 1 nos indica que el valor teórico calculado de la corriente total se encuentra dentro del rango de incerteza del multímetro, siendo una diferencia de pocos decimales, por lo que se puede concluir que se cumple la ley de Ohm para este circuito. \\
+   
+   Vemos como es el comportamiento del voltaje y corriente en el circuito 3, del cual podemos aplicar las leyes de Kirchhoff tanto para el calculo que los corrientes que circuilan por cada segmento cerrado, como el voltaje en puntos de intersección, como se ve en los resultados calculados al momento de simularlo nos da el mismo valor con esto comproblamos que las leyes de corriente y voltaje se cumplen. 
+
+%-----------------------------Conclusiones---------------------------------------
+
+    
+
+\section{Conclusiones}
+
+La conclusión es un análisis de los datos obtenidos y debe confirmar o descartar la hipótesis de
+manera concreta. La conclusión debe resumir lo que contiene el informe y lo aprendido
+durante la práctica. Si la conclusión confirma la hipótesis, debe establecerse con claridad la
+evidencia que la sostiene. Si la conclusión descarta la hipótesis, hay que aportar las posibles
+explicaciones de las diferencias. Estas diferencias pueden incluir error humano, diseño
+experimental, falla en el equipo, etc.
+La conclusión debe expresar el juicio crítico propio al que se llegó tras la investigación. Debe
+dar la impresión de que el reporte cumplió la finalidad de llegar a algo correcto con respecto a
+la hipótesis y objetivos planteados en la introducción.
+De no tener hipótesis planteadas, las conclusiones dan las respuestas a los objetivos planteados
+
+
+\begin{enumerate}
+\item Conclusión 1
+
+\item Conclusión 2
+\end{enumerate}
+%--------------------------------------------------------------------------------
+
+
+\section{Cuestionario}
+
+Deben responderse las preguntas del cuestionario incluido en el protocolo de cada práctica.
+
+
+\begin{enumerate}
+  		\item[•] Pregunta 1
+\end{enumerate}
+
+
+
+
+
+%-----------------------------------No tocar----------------------------------------
+\end{multicols}
+%----------------------------Bibliografías---------------------------------------
+\begin{thebibliography}{99}
+
+\bibitem{}José L. Frenández \textit{Fisicalab Ley de Ohm} [En linea][25 de Agosto de 2020]. Disponible en:\\ \url{https://www.fisicalab.com/apartado/ley-de-ohm}
+
+\bibitem{}Tecnología \textit{Divisor de tensión y corriente} [En linea][25 de Agosto de 2020]. Disponible en:\\ \url{https://www.areatecnologia.com/electronica/divisor-de-tension.html}\\
+\url{https://www.areatecnologia.com/electronica/divisor-de-corriente.html}
+
+\bibitem{}EcuRed \textit{Teorema de Thevenin y Norton} [En linea][25 de Agosto de 2020]. Disponible en:\\ \url{https://www.ecured.cu/Teorema_de_Thevenin}
+\url{https://www.ecured.cu/Teorema_de_Norton}
+
+\bibitem{}Anónimo \textit{Transformación de fuentes} [En linea][25 de Agosto de 2020]. Disponible en:\\ \url{http://analisisdecircuitosporteoremascd.blogspot.com/2017/03/transformacion-de-fuentes.html}
+
+\bibitem{}Fisica Práctica \textit{Teorema de la transferencia máxima de potencia} [En linea][25 de Agosto de 2020]. Disponible en:\\ \url{https://www.fisicapractica.com/transferencia.php}
+
+\bibitem{}Anónimo \textit{Supernodos y Supermallas} [En linea][25 de Agosto de 2020]. Disponible en:\\ \url{http://electrobis.blogspot.com/2012/01/nodos-supernodos-malla-y-supermalla.html}
+
+\bibitem{}Giovanni Hr. \textit{Transformación Delta-Estrella y Estrella-Delta} [En linea][25 de Agosto de 2020]. Disponible en:\\ \url{https://analisisdecircuitos1.wordpress.com/parte-1-circuitos-resistivos-cap-11-a-20-en-construccion/capitulo-19-transformacion-delta-estrella-y-estrella-delta/}
+\end{thebibliography}
+\end{document}

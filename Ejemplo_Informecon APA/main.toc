@@ -1,0 +1,13 @@
+\babel@toc {spanish}{}
+\contentsline {chapter}{\numberline {1}Introducción}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Justificación}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Objetivos}{2}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Objetivo general}{2}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Objetivos especificos}{2}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Competencias}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Contenido}{3}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Cronograma}{3}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Día 1}{3}{subsection.1.5.1}%
+\contentsline {chapter}{\numberline {2}Material de apoyo}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Links útiles}{4}{section.2.1}%
+\contentsline {chapter}{Referencias}{5}{chapter*.2}%

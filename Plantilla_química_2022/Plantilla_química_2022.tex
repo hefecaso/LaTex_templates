@@ -1,0 +1,470 @@
+%Autor: Héctor Fernando Carrera Soto
+%Correo: hfcarrerasoto.usac@gmail.com
+%Universidad de San Carlos
+%Ingeniería electrónica
+
+%%%%%%%%%%%%%%%%%
+%	Preámbulo	%
+%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[left=3cm,right=1.5cm,top=1.5cm,bottom=1.5cm]{geometry}
+
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%
+%Paquete de Idioma
+\usepackage[spanish]{babel}
+%
+%Codificación Alfabeto
+\usepackage[utf8]{inputenc}
+%
+%Codificación de Fuente
+\usepackage[T1]{fontenc}
+%
+%Índice
+\usepackage{makeidx}
+%
+%Gráficos
+\usepackage{graphicx}
+\usepackage{subfig}
+%\usepackage{xcolor} 
+%
+%Matemática
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{amstext} 
+%
+%Estilo de Página Numeración superior
+%\pagestyle{headings}
+%
+%Hiperlinks \href{url}{text}
+\usepackage[pdftex]{hyperref}
+%
+%Graficos y tablas
+\usepackage{multirow}
+%\usepackage{multicol}
+
+%El paquete float es importante para las imágenes con la opción [H] para que las imágenes se coloquen en donde lo deseamos
+\usepackage{float}
+\usepackage{booktabs}
+%
+\decimalpoint
+%\bibliographystyle{IEEEtran}
+%\bibliography{IEEEabrv,mybibfile}
+%Para tachar dimencionales
+\usepackage{cancel}
+%
+%%<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>
+%<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>
+%<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>
+%	  Paquetes agregados al formato
+%<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>
+%<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>
+%<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>
+
+
+%<<<<<<<<< Comando valores absolutos |x| >>>>>
+\newcommand{\abs}[1]{\lvert#1\rvert}
+%<<<<<<<<< Comando para la normal ||x|| >>>>>
+\newcommand{\norm}[1]{\lVert#1\rVert}
+
+%<<<<<<<<< para saltos de página usar  \clearpage >>>>>
+%<<<<<<<<< para saltos entre líneas usar \vspace{2cm}>>>>>
+%<<<<<<<<< para espaciado horizontal \hspace{1cm}>>>>>
+%<<<<<<<<< para colocar url o referencias a url usar \url{http://www.latex-project.org/} o  \href{http://www.latex-project.org/}{latex project}>>>>>>>
+
+%<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>
+
+%Paquete para configurar medidas de las tablas
+\usepackage{tabularx}
+%Forma del comando
+%\begin{tabular}{|m{0.22\linewidth}|m{0.22\linewidth}|}
+
+
+%<<<<<<<<< Para configurar \begin{enumerate}[A)]  en donde está la letra "A" escogemos como queremos enumerar, ejemplo \begin{enumerate}[i)]>>>>>>>>>>>>>>
+
+\usepackage{enumerate}
+
+%<<<<<<<<< Cambiar columnas >>>>>
+
+%Se aconseja colocar el documento a una columna y luego cambiarle con forme se vaya utilizando. comandos:
+%\begin{multicols}{2}
+	%contenido
+%\end{multicols}
+\usepackage{multicol} %Paquete cambiar columnas
+
+%<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>
+
+%Configurar sangría
+\setlength{\parindent}{0.75cm}
+
+%>>>>>>>>>>>>>>>>>>Esto es para interlineado V2<<<<<<<
+
+%Para interlineado
+\renewcommand{\baselinestretch}{1.5}
+
+%Para cambiar la sangría 2
+%\setlength{\parindent}{4em}
+
+%Espaciado entre parrafos
+%\setlength{\parskip}{1em}
+
+%<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>
+
+%Para colocar punto decimal en lugar de coma automático.
+\spanishdecimal{.}
+
+%Para colocar anotaciónes al pié de página, podemos utilizar \footnote{Anotación pié de página}, pegado a la palabra a la cuál se hará la anotación.
+
+%<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>
+
+%Para agregar un índice: \tableofcontents
+
+
+
+%<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>
+
+% El comando \ balance se puede utilizar para equilibrar las columnas en la página final si se desea. Debe colocarse en cualquier lugar dentro de la primera columna de la última página.
+\usepackage{balance}
+
+%\balance
+%<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>
+
+%Use el paquete pdfpages.
+%Para incluir todas las páginas en el archivo PDF:
+% \includepdf[pages=-]{myfile.pdf}
+
+%Para incluir solo la primera página de un PDF:
+%\includepdf[pages={1}]{myfile.pdf}
+
+%Ejecute texdoc pdfpages en un Shell para ver el manual completo de pdfpages.
+
+\usepackage{pdfpages}
+
+%<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>
+
+%Este comando sirve para importar archivos txt.
+
+\usepackage{verbatim}
+
+% Usar \verbatiminput{archivo.tex}
+
+
+
+%<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>
+%Para agregar una caratula más personalizada
+%\begin{titlepage}
+%	*
+%\begin{titlepage}
+
+%<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>
+
+%Para agregar texto entre ecuaciónes
+%\textup{•}
+%<<<<<<<<< Permite poner varios autores >>>>>>>>>>>>>
+
+\usepackage{authblk}
+
+%\author[1]{Author \thanks{correo1•university.edu}}
+%\author[1]{Author \thanks{correo2•university.edu}}
+%\author[1]{Author \thanks{correo3•university.edu}}
+%\author[2]{Author \thanks{correo3•university.edu}}
+%\author[2]{Author %\thanks{correo4•university.edu}}
+
+%\affil[1]{Department of Computer Science, \LaTeX\ University}
+%\affil[2]{Department of Mechanical Engineering, \LaTeX\ University}
+
+%<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>
+%<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>
+
+%>>>>>>>>>>>>>><Fuente parecido al arial<<<<<<<<<<<
+\usepackage{helvet}
+\renewcommand*\familydefault{\sfdefault}
+
+
+\usepackage{apacite}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Cambiando nombre de referencias a bibliografía	%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Cambiando el nombre de los cuadros y referencias a:
+%Tabla y bibliografía
+
+%Cambiando Referencia por Bibliografía
+\renewcommand{\refname}{Bibliografía}
+%Cambiando Cuadro por tabla
+\renewcommand{\tablename}{Tabla}
+%Cambiando enumeración arábica a romana en figuras
+\renewcommand{\thefigure}{\roman{figure}}
+%Cambiando enumeración arábica a romana en tablas
+\renewcommand{\thetable}{\roman{table}}
+
+%%%%%%%%%%%%%%%%%
+%	Caratula	%
+%%%%%%%%%%%%%%%%%
+
+
+\begin{titlepage}
+
+\begin{flushleft}
+\textbf{Universidad de San Carlos de Guatemala}\\
+\textbf{Facultad de ingeniería}\\
+\textbf{Escuela de Ciencias}\\
+\textbf{Laboratorio de Química General 1}\\
+\end{flushleft}
+
+\vspace{8 cm}
+
+\begin{center}
+\textbf{Práctica \# n}\\
+{\large \textbf{Nombre de la práctica}}
+\end{center}
+
+\vspace{9 cm}
+
+\begin{tabbing}
+\hspace{3cm}\=\hspace{5cm}\=\kill
+ Nombre: \>   \> Registro Académico: \\ 
+ Instructor: \>   \> Sección de Laboratorio: \\ 
+ Fecha de realización: \>   \> Fecha de Entrega:
+\end{tabbing} 
+
+\end{titlepage}
+
+
+
+%%%%%%%%%%%%%%%%%
+%	Resumen		%
+%%%%%%%%%%%%%%%%%
+
+\section{Resumen}
+
+
+El resumen debe estar dividido en tres párrafos, respondiendo a las siguientes interrogantes:\
+
+Qué se hizo.
+Cómo se hizo.
+A qué se llegó y bajo qué condiciones.\
+
+Todas las interrogantes deben referirse al reporte y no a lo realizado en el Laboratorio, a
+excepción de algún procedimiento que pudo haber influido sobre los resultados y las condiciones de
+trabajo. Recuerda que no se colocan las interrogantes, únicamente se contestan a ellas en los
+párrafos referidos.
+
+
+
+%%%%%%%%%%%%%%%%%
+%	Resultados	%
+%%%%%%%%%%%%%%%%%
+
+\section{Resultados}
+
+Todos resultados deben ser presentados únicamente en tablas. Gráficos sólo serán reportados cuando se te solicite, de lo contrario no colocar gráficos. Las tablas se nombrarán como Tabla 1.\
+
+Nombre de la tabla. según sea el caso; y los gráficos como Figura 1. Nombre de la figura. según
+sea el caso. Recordar que desde esta sección se inicia a numerar y nombrar tablas y figuras (gráficos). \
+
+Es importante que puedas agrupar tu información en la cantidad de tablas que consideres
+necesarias, pero debes cumplir con los objetivos de la práctica.
+
+
+%>Cuadro agua
+\begin{table}[H]
+\begin{center} 
+ \begin{tabular}{|c|c|c|} 
+	\hline
+	\multicolumn{3}{ |c| }{Agua} \\ 		
+	\hline 	
+   Media masa $(g)$ & Error Absoluto & Error relativo $\%$ \\ 
+   \hline 
+   121.528
+    & 2.315
+    & 1.90
+    \\ 
+   \hline 
+   \end{tabular}   
+\end{center}
+\caption{Fuente propia.}
+\label{tabla_1_h2o}
+\end{table}
+
+
+%>Cuadro miel
+\begin{table}[H]
+\begin{center} 
+ \begin{tabular}{|c|c|c|} 
+	\hline
+	\multicolumn{3}{ |c| }{Miel} \\ 		
+	\hline 	
+   Media masa $(g)$ & Error Absoluto & Error relativo $\%$ \\ 
+   \hline 
+   110.411
+    & 2.726
+    & 2.47
+    \\ 
+   \hline 
+   \end{tabular}   
+\end{center}
+\caption{Fuente propia.}
+\label{tabla_1_miel}
+\end{table}
+
+%>Cuadro aceite
+\begin{table}[H]
+\begin{center} 
+ \begin{tabular}{|c|c|c|}
+	\hline
+	\multicolumn{3}{ |c| }{Aceite} \\ 		
+	\hline 	
+   Media masa $(g)$ & Error Absoluto & Error relativo $\%$ \\ 
+   \hline 
+   171.522
+    & 2.970
+    & 1.73
+    \\ 
+   \hline 
+   \end{tabular}   
+\end{center}
+\caption{Fuente propia.}
+\label{tabla_1_aceite}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Interpretación de resultados	%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Interpretación de resultados}
+
+
+Para la interpretación de resultados debes colocar un párrafo por cada tabla y/o por cada figura que aparezca en la sección de Resultados .\
+
+Recuerda que en esta sección debes cuestionar los resultados obtenidos, no describirlos.\ 
+
+Tu interpretación dependerá de cuánta información leíste acerca de la temática del reporte. \
+
+No debes colocar teoría directamente, debes utilizarla como respaldo de tus resultados y así poderlos
+cuestionar, pues esta área no es una investigación.
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%	Conclusiones	%
+%%%%%%%%%%%%%%%%%%%%%
+
+\section{Conclusiones}
+
+Las conclusiones deben ser concretas y específicas. Estas se realizan en función de los objetivos de la práctica.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Metodología experimental	%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Metodología experimental}
+
+Debes colocar la información que aparece en tu instructivo. Recuerda que debe estar escrito en pasado y en forma impersonal (se midió, se observó, etc.) y no en forma imperativa (mida, observe, etc.).\
+
+Todos los pasos deben estar numerados y debes omitir los pasos que fueron obviados según
+instrucciones del instructor.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Hoja de datos originales	%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Hoja de datos originales}
+
+
+%Use el paquete pdfpages.
+%Para incluir todas las páginas en el archivo PDF:
+% \includepdf[pages=-]{myfile.pdf}
+
+%Para incluir solo la primera página de un PDF:
+%\includepdf[pages={1}]{myfile.pdf}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Muestra de cálculo	%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Muestra de cálculo}
+
+En esta sección se deben incluir todos los cálculos del reporte, a excepción de cálculos de Análisis de Error, entre los que se pueden mencionar Error Relativo y Absoluto, Desviación Estándar, Q de Dixon , Límites de Confianza, entre otros.\
+
+Solo debes colocar un ejemplo por cada ecuación que aparezca en esta sección. Por ejemplo si la ecuación de la media o promedio la utilizaste en varios casos (mediciones de masa, de temperatura, tiempo, etc.) solo debes colocar un ejemplo. Para ecuaciones de estadística de medidas de tendencia central (media, desviación estándar, varianza, Q de Dixon, entre otros) utiliza las ecuaciones genéricas, como en el ejemplo 6.3.1 de la Figura 5.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Volúmen estimado	%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsubsection{Ejemplo de ecuación Volúmen total estimado por corrida}
+
+
+Para encontrar el volúmen total estimado vertido para llenar media taza se utilizó una regla de trés para encontrar el total de volúmen posible total por cada corrida de los distintos fluidos. Se utilizó la mayor cantidad de veces que se vertió el fluido para media taza como el $100 \%$ necesario para llegar a los 125 $\dfrac{g}{cm^{3}}$.
+
+
+
+\[\frac{C_{M}}{V_{mT}} =  \frac{C_{T}}{V_{T}} \]
+
+
+Despejando:
+
+
+\begin{equation}
+V_{T} (C_{T}) = \dfrac{C_{T}}{C_{M}/V_{mT}}
+\label{Ec_volúmen}
+\end{equation}
+
+
+Dónde:\\
+$V_{T} =$ Volúmen total de la corrida.\\
+$C_{T} =$ Cantidad de veces total vertido.\\
+$C_{M} =$ Cantidad mayor de veces vertida.\\
+$V_{mT} =$ Volúmen de media una taza.\\
+
+
+
+Utilizando la ecuación número \ref{Ec_volúmen} para el calculo del segundo volúmen total estimado que fue vertido en la segunda corrida para el $H_{2}O$.
+
+
+\[V_{T} (23) = \dfrac{23}{26/125} = 119.792 \dfrac{g}{cm^{3}}\]
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Análisis de Error	%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Análisis de Error}
+
+Análisis de Error En esta sección se colocarán todos cálculos de Error Relativo, Error Absoluto, Desviación Estándar, Q de Dixon, Límites de Confianza, entre otros. Además se incluirá una tabla de las incertezas de los instrumentos y equipo utilizado para realizar la práctica. \cite[p. 215]{greenwade93} \
+
+El Análisis de Error es prácticamente una Muestra de Cálculo, con la diferencia que en esta sección se colocan los cálculos mencionados anteriormente. \cite{Einstein}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Datos calculados	%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Datos calculados}
+
+En esta sección se agrupan en tablas y de forma ordenada los resultados de todos los cálculos de las secciones Muestra Cálculo y Análisis de Error. No se deben colocar ecuaciones o datos originales en esta sección. \cite{Freud}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%	Bibliografías	%
+%%%%%%%%%%%%%%%%%%%%%
+
+%Primero darle a F11, luego a F6 y por último compilamos, así veremos la bibliografía, esto cada vez que hagamos una citación en nuestro documento.
+
+\bibliographystyle{apacite}
+%\nocite{*} %Descomentar para que genere la bibliografía sin citar
+%\cite{Einstein} Para citar al final del parrafo citado.
+%\cite[p.10]{Einstein} Para citar al final del parrafo citado con página.
+%\nocite{Einstein} Para mostrar en referencias sin citar.
+\bibliography{bibliografia}
+
+\end{document}

@@ -1,0 +1,10 @@
+\begin{table}[H]
+\begin{center}
+
+	<Aquí va la tabla>
+
+\caption{Pie de tabla}
+\centering{Fuente: }
+\label{Etiqueta}
+\end{center}
+\end{table}

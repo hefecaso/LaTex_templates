@@ -1,0 +1,5 @@
+%Este comando sirve para importar archivos txt.
+
+\usepackage{verbatim}
+
+% Usar \verbatiminput{archivo.tex}

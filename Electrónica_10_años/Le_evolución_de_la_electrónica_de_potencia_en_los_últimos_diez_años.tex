@@ -1,0 +1,463 @@
+\documentclass[12pt,letterpaper,superscriptaddress]{article}
+
+%>>>>>>>>>>>>>><Fuente parecido al arial<<<<<<<<<<<
+\usepackage{helvet}
+\renewcommand*\familydefault{\sfdefault}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm]{geometry}
+
+%>>>>>>>>>>>>>>>>>>Esto es para la sangría<<<<<<<
+\setlength{\parindent}{0.75cm}
+
+%>>>>>>>>>>>>>>>>>>Esto es para interlineado<<<<<<<
+\setlength{\parskip}{5mm}
+
+%si quiero que la distancia extra entre párrafos sea la misma que el interlineado, puedo escribir, simplemente:
+
+%\setlength{\parskip}{\baselineskip}}
+
+
+%si quiero que la distancia extra entre párrafos sea la misma que el interlineado, puedo escribir, simplemente:
+
+%\setlength{\parskip}{\baselineskip}}
+
+%\begin{Hiperlinks \href{url}{text}
+\usepackage[pdftex]{hyperref}
+
+
+%<<<<<<<<< para saltos de página usar  \clearpage >>>>>
+%<<<<<<<<< para saltos entre líneas usar \vspace{2cm}>>>>>
+%<<<<<<<<< para espaciado horizontal \hspace{1cm}>>>>>
+%<<<<<<<<< para colocar url o referencias a url usar \url{http://www.latex-project.org/} o  \href{http://www.latex-project.org/}{latex project}}
+
+%<<<<<<<<< Configuraciónes en las tablas >>>>>
+%Paquete para configurar medidas de las tablas
+\usepackage{tabularx}
+%Forma del comando
+%\begin{tabular}{|m{0.22\linewidth}|m{0.22\linewidth}|}
+
+
+\begin{document}
+
+%-----------------------------Caratula----------------------------------------------
+\begin{titlepage}
+\begin{center}
+
+{\small
+\begin{tabular}{p{0.75\textwidth} p{0.50\textwidth} }
+\includegraphics[scale=0.2]{escudo_usac.png} &  \includegraphics[scale=0.33]{logo-fiusac.png}
+\end{tabular}
+}
+
+\vspace{2.56cm}
+
+\begin{center}
+\begin{Large}
+Universidad de San Carlos de Guatemala
+\end{Large}
+\end{center}
+
+
+
+\begin{center}
+\begin{Huge}
+\textbf{Evolución de la electrónica de potencia en los últimos diez años}
+\end{Huge}
+\end{center}
+
+
+
+\begin{center}
+\begin{normalsize}
+Facultad de Ingeniería\\
+Escuela de Ingeniería Mecánica Eléctrica\\
+Electrónica 1\\
+\end{normalsize}
+\end{center}
+
+
+
+\begin{center}
+\textbf{\today}
+\end{center}
+
+
+\textbf{Héctor Fernando Carrera Soto \footnote{\href{3505043180101@ingenieria.usac.edu.gt}{e-mail: 3505043180101@ingenieria.usac.edu.gt}}}\\
+Carné: 201700923
+\end{center}
+\end{titlepage}
+
+%--------------------------------------------------------------------------------------
+\tableofcontents
+\clearpage
+
+%--------------------------------------------------------------------------------------
+
+
+\section{Prólogo}
+
+Durante muchos años ha existido la necesidad de controlar la potencia electrónica de los sistemas de tracción y de los controles industriales impulsados por motores eléctricos; esto ha llevado un temprano desarrollo del sistema Ward-Leonard\footnote{Se trata de un grupo motor-generador-motor destinado a lograr el control del sentido de giro y ajustar la velocidad en motores de corriente continua.} con el objetivo de obtener un voltaje de corriente directa variable para el control de los motores e impulsadores. La electrónica de potencia ha revolucionando la idea del control para la conversión de potencia y para el control de los motores electrónicos.
+
+La electrónica de potencia se basa, en primer termino, en la conmutación de dispositivos semiconductores de potencia. Con el desarrollo de la tecnología de los semiconductores de potencia, las capacidades del manejo de la energía y la velocidad de conmutación de los dispositivos de potencia se han elevado.
+
+El desarrollo de la tecnologías de los microprocesadores- microcomputadoras tiene un gran impacto sobre el control y la síntesis de la estrategia de control para los dispositivos semiconductores de potencia. El equipo de electrónica de potencia moderno utiliza (1) Semiconductores de potencia, que pueden compararse con el musculo, y (2) microelectrónico, que puede simular el poder y la inteligencia de un cerebro artificial de menor capacidad.
+
+Describamos brevemente un poco de la evolución de la electrónica de potencia a lo largo de los años.
+
+\begin{enumerate}
+	\item[1900:] Creación del rectificador de arco de mercurio.
+	
+	\item[1906:] Invención del triodo.
+	
+	\item[1933:] Rectificador de selenio.
+	
+	\item[1948:] Invención del transistor de silicio.
+	
+	\item[1949:] Transistor de unión.
+	
+	\item[1956:] El tiristor.
+	
+	\item[1958:] Primer circuito integrado.
+	
+	\item[1958:] Segunda revolución electrónica-
+	
+	\item[1970:] Creación de distintos tipos de dispositivos electrónicos.
+	
+	\item[1975:] Introducción de los microprocesadores.
+	
+	\item[1976:] Comercialización del MOSFET.
+	
+	\item[1982:] Transistor bipolar.
+	
+	\item[1990:] Motor variable.
+	
+	\item[2000:] Invención de plantas solares y vehículos eléctricos.
+\end{enumerate}
+
+%********************************************************
+
+Primero fue el fuego, el cual propició la cocción de los alimentos y con ello, a los homínidos les creció el cerebro. Esto fue determinante en el desarrollo de tecnología que terminó por posicionar al ser humano como el gran depredador del planeta. Ya viviendo en esquemas de civilización, el ser humano echó mano del viento y el agua como fuentes de energía para producir sus alimentos. Los excedentes se podían almacenar, pero también comerciar con otros pueblos, lo cual sentó las primeras bases de la economía.
+
+El descubrimiento del carbón, el primer combustible fósil al que se tuvo acceso, transformaría a la humanidad. Permitió la industrialización y con ella, un nuevo modo de convivir en sociedad. Más tarde, la gasolina movería el transporte de mercancías y pasajeros gracias a la invención del motor de combustión interna y la corriente alterna posibilitó iluminar y dar calor a las ciudades, transformando la vida cotidiana de millones de personas. En un principio, los combustibles fósiles favorecieron el desarrollo económico y con él vendría una masificación de los servicios públicos de educación y salud.
+
+Quizá el error estuvo en depender solo de ellos para generar electricidad y transportarnos, sustituyendo otras fuentes energéticas más renovables, relegándolas al olvido hasta que, obligados por el calentamiento global, la humanidad las retomó a finales del siglo XX. Tal vez, si no las hubiéramos olvidado y se hubiera seguido perfeccionando estas tecnologías, a estas alturas ya se hubiera resuelto, por ejemplo, el problema del almacenamiento, se tendrían más opciones descentralizadas de producción de energía y ya la humanidad tendría matrices eléctricas diversificadas, sólidas y eficientes.
+
+%********************************************************
+
+Vayamos un poco más cerca a nuestra época, veamos la evolución de la electrónica de potencia en los últimos diez años. El hombre ha utilizado la energía del sol hace miles de años, desde la antigua Grecia donde se utilizaban lentes amplificadores para encender fogatas proyectando los rayos solares, pasando por Da Vinci y sus inventos, hasta su aplicación en la ingeniería espacial en los años 60 para darle energía a las naves espaciales, hoy en día se pretende utilizar como energía de uso doméstico.
+
+La energía que proviene del sol se puede obtener de dos formas diferentes: Puede ser a través de espejos, que redirigen los rayos solares a un receptor de calor que genera vapor y mueve una turbina que produce electricidad. Y también a través de paneles solares fotovoltaicos formados por celdas solares que transforman la luz (fotones) en energía eléctrica (electrones).
+
+\clearpage
+%------------------------------Introducción-----------------------------------------
+
+\section{Introducción}
+
+Cada vez son más los dispositivos y sistemas que en una o varias de sus etapas son
+accionados por energía eléctrica. Los accionamientos consisten, en general, en procesos que transforman la energía eléctrica en otro tipo de energía, o en el mismo tipo, pero con diferentes características. Los encargados de realizar dichos procesos son los Sistemas de Potencia.
+
+Las aplicaciones de la electrónica estuvieron limitadas durante mucho tiempo a las técnicas de alta frecuencia (emisores, receptores, etc.). En la evolución de la electrónica industrial, las posibilidades estaban limitadas por la falta de fiabilidad de los elementos electrónicos entonces disponibles (tubos amplificadores, tiratrones, resistencias, condensadores), esta fiabilidad era insuficiente para responder a las altas exigencias que se requerían en las nuevas aplicaciones del campo industrial.
+
+
+Gracias al descubrimiento de los dispositivos semiconductores (transistores, tiristores, etc.) en la década de los 60, que respondían a las exigencias industriales (alta fiabilidad, dimensiones reducidas, insensibilidad a las vibraciones mecánicas, etc.), la electrónica industrial hizo progresos increíbles, permitiendo la realización de procesos cada vez más complejos, destinados a la automatización de procesos industriales. 
+
+Hablemos sobre las energías renovables, las cuál es la tecnología en la electrónica de potencia con más auge desde el año 2000.
+
+\clearpage
+
+%------------------------------Parte 1-----------------------------------------
+
+\section{Electrónica de potencia, tecnología para un futuro sostenible}
+
+La electrónica de potencia permite adaptar y transformar la energía eléctrica en amplitud y frecuencia adaptando los parámetros eléctricos a cada aplicación de uso mediante el empleo de semiconductores.
+
+También tiene un papel clave en la minimización de las pérdidas de potencia en un equipo eléctrico de consumo, además de realizar el control del equipo en un sistema industrial.
+
+Las acciones a las que contribuye para minimiza las pérdidas de potencia de un equipo eléctrico son varias:
+
+\begin{itemize}
+	\item Optimiza las instalaciones.
+	\item Receptores con mejor rendimiento y máquinas mejor ajustadas.
+	\item Revisa procesos y análisis de alternativas: arranques suaves, frenado regenerativo, no estrangulamientos, regulación de velocidad, etc.
+	\item Aumenta el factor de potencia.
+	\item Vigila temperaturas y conexiones.
+	\item Reduce distorsiones y desequilibrios.
+\end{itemize}
+
+
+Y se consiguen importantes ahorros en:
+
+\begin{itemize}
+	\item Regulación de velocidad de motores eléctricos, de hasta un 30%.
+	\item Eficiencia en motores, de hasta un 8%
+	\item Modificación de la curva de carga.
+	\item Iluminación eficiente, de hasta un 40%.
+\end{itemize}
+
+La aparición de dispositivos de electrónica de potencia de nueva generación (SiC)\footnote{\textbf{Carburo de silicio:} Es un carburo covalente, tiene una estructura de diamante. Debido en parte a su estructura, es casi tan duro como el diamante, alcanzando durezas en la escala de Mohs de 9 a 9,5.}, (GaN)\footnote{\textbf{Nitruro de galio:} Es una aleación binaria de semiconductores con una banda prohibida directa que se ha venido usando en diodos emisores de luz (LEDs) desde los años noventa. Este compuesto químico es un material muy duro que tiene una estructura cristalina Wurtzita.} y de sistemas electrónicos de control cada vez más potentes, están permitiendo la creación de convertidores electrónicos de potencia de media frecuencia más eficientes energéticamente con un ahorro importante en materias primas.
+
+En la actualidad, transformadores de corriente basados en electrónica de potencia de media frecuencia, son capaces de reducir la necesidad de materias primas a una décima parte, reduciendo perdidas de potencia de manera considerable. Hoy en día, un transformador puede pesar una décima parte y reducir de manera considerable su volumen, con un ahorro importante en materias primas como hierro y cobre.
+
+El salto tecnológico que se está produciendo en la electrónica de potencia es disruptivo y ofrece una oportunidad de mejora en todo lo relacionado con gestión energética eficiente. La electrónica de potencia se hace imprescindible para la eficiencia en el uso de los recursos materiales y energéticos, y para la sostenibilidad. Además, plantea desafíos que obligan a ingenieros y empresas a prepararse para el cambio de la transición energética.
+
+En los próximos capítulos hablaremos sobre los distintos tipos de energías renovables y los EV\footnote{Vehíclos eléctricos.}
+
+%------------------------------Parte 2-----------------------------------------
+
+\section{Las energías renovables}
+
+\subsection{Revolución en la energía renovable}
+
+Las energías renovables emplean hoy al doble de personas que la industria petrolera (petróleo y gas). La Agencia Internacional de la Energía Renovable estima que la fotovoltaica, la eólica, la biomasa y otras fuentes limpias dan trabajo a más de once millones de personas (en España, dan unos 50.000 empleos directos). La transición energética es toda una revolución. El sector eólico prevé instalar en los próximos cinco años más potencia eléctrica que la instalada por la nuclear los últimos 40 años. Y la solar fotovoltaica, también.
+
+Según la patronal europea del sector solar, entre el 2019 y el 2023, el mundo añadirá al parque fotovoltaico global (que suma ya 600 gigavatios de potencia) entre 800 y 1.300 gigavatios (GW) más: un crecimiento de entre el +60\% y el +160\%. Para que nos hagamos una idea de la magnitud, tras 60 años de historia, la nuclear tiene hoy 396 GW de potencia de generación. Es algo que parecía impensable hace sólo diez años, cuando la potencia solar acumulada en todo el mundo no alcanzaba los 10 GW. Y lo bueno es que el sol brilla en todas partes. Entre los diez países con más potencia fotovoltaica conectada, hay de cuatro continentes: EE.UU., Corea, Australia o Alemania.
+
+En el 2018, la fotovoltaica instaló más potencia que ninguna otra tecnología de generación de electricidad: 100 GW (frente a los 54 de la eólica o los 6 netos de la nuclear). A pesar de ello, la contribución de la solar fotovoltaica al mix global apenas supone hoy el 2,6\% de la demanda de electricidad en el mundo (casi nada frente al 38\% del carbón, el 23\% del gas, el 20\% de la hidráulica y la biomasa, el 10\% de la nuclear...). O sea, que la revolución energética está emergiendo. Con vigor inaudito. Pero apenas está... amaneciendo.
+
+¿Los motivos de la eclosión? Ambientales (los kilovatios hora solares no llevan aparejadas emisiones de CO2\footnote{Dióxido de carbono}, como sí los tienen los kilovatios que generan las centrales térmicas de gas o carbón) y, sobre todo, económicos. Entre el 2010 y el 2017, el precio de los módulos solares ha caído un 80\%. La Unión Española Fotovoltaica estima que entre el 2009 y el 2019, los costes se han reducido un 95\%
+
+La caída en picado se ha debido sobre todo a la I+D\footnote{El \textbf{I+D} es el símbolo de Investigación y Desarrollo que se aplica a los departamentos de investigación públicos o privados, encaminados al desarrollo de nuevos productos o la mejora de los existentes por medio de la investigación científica.}, que ha reducido los costes de fabricación, distribución e instalación, a la par que ha incrementado la calidad del producto, su eficiencia y rentabilidad. Ya es más barato producir electricidad con el sol que hacerlo en una gran central de gas en muchas regiones del planeta. En España, una instalación para autoconsumo de 100 kilovatios (sobre la cubierta de una nave industrial, por ejemplo) puede amortizarse en cinco o seis años. Y como la vida útil de estas instalaciones supera los 25 años, sus beneficiarios dispondrán de electricidad gratuita durante dos décadas.
+
+La escalabilidad (y la adaptabilidad) de las soluciones fotovoltaicas es otra de sus grandes virtudes. La fotovoltaica puede materializarse en forma de grandes megaparques solares o como pequeñas instalaciones de autoconsumo doméstico, conectadas a red o aisladas. Y puede asentarse sobre el suelo, forrar fachadas, coronar las cubiertas de un aparcamiento, rematar el tejado de una casa de campo...
+
+La eólica, que ya atiende el 6\% de la demanda mundial de electricidad, es la otra gran protagonista de esta revolución. Es protagonista en tierra, donde ya produce electricidad en muchas regiones del planeta a un coste que compite sin ayudas y gana al gas. Y protagonista en los mares, donde no sólo es ya toda una realidad (23.000 megavatios instalados mar adentro), sino que está a punto de abrir la mayor ventana de oportunidad energética del siglo: la que ofrecen los vientos más poderosos y constantes, los más alejados, los que sólo soplan muy lejos de la costa.
+
+Allí no pueden ser cimentados los aerogeneradores (dada la profundidad del agua), pero sí pueden operar sobre plataformas que flotan. Y la eólica flotante ya está aquí: la primera instalación fue inaugurada en el 2017; y, aunque su coste por megavatio es aún elevado, las grandes economías (EE.UU., China, India, la UE) ya han vuelto su mirada hacia esa mina, porque sus costes están cayendo a un fuerte ritmo y el recurso es formidable. Según la Agencia Internacional de la Energía, la eólica flotante puede abastecer varias veces la demanda de electricidad de varios mercados clave, \emph{“incluyendo Europa, EE.UU. y Japón”}.
+
+Es sólo el principio: el Consejo Global de la Energía Eólica acaba de publicar un informe en el que analiza las “perspectivas del mercado eólico marino global”. Pues bien, el más conservador de los supuestos manejados estima que en 10 años se instalarán 165.000 megavatios de potencia en el mar.
+
+\clearpage
+
+\subsection{Energía eólica}
+
+La energía eólica es una de las formas de energía más antiguas usadas por la humanidad. Desde el principio de los tiempos, los hombres utilizaban los molinos de viento para moler cereales o bombear agua. Con la llegada de la electricidad, a finales del siglo XIX los primeros aerogeneradores se basaron el la forma y el funcionamiento de los molinos de viento. Sin embargo, hasta hace poco tiempo no la generación de electricidad a través de aerogeneradores no ha jugado un gran papel.
+
+Con la primera crisis del petróleo en los años 70, sobre todo a partir de los movientos contra la energía nuclear en los años 80 en Europa, se despertó el interés en energías renovables. Se buscaron nuevos caminos para explotar los recursos de la Tierra tanto ecológicamente como rentables económicamente. Los aerogeneradores de aquella época eran demasiado caros, y el elevado precio de la energía que se obtenía a través de los mismos era un argumento para estar en contra de su construcción. Debido a esto, los gobiernos internacionales promovieron la energía eólica en forma de programas de investigación y de subvenciones, la mayoría de las mismas aportadas por los gobiernos regionales.
+
+Así se crearon las instituciones como DEWI\footnote{Instituto Alemán de la Energía Eólica} o Risø\footnote{Instituto de Investigación Danés}, que poco a poco han llevado a cabo una estandarización de las instalaciones y de los métodos de seguridad ha llevado y está llevando a cabo un mejor rendimiento económico de las instalaciones.
+
+Los altos costes de generación de electricidad a partir del viento se redujeron considerablemente en 1981 al 50\% con el desarrollo de un aerogenerador de 55 kW. Las organizaciones ecológicas consideran la energía eólica una de las fuentes de energía más económicas si incluimos los costes externos de generación de energía (por ejemplo, los daños del medio ambiente).
+
+Los aerogeneradores modernos generan actualmente una parte importante de la energía eléctricidad mundial. Alemania, USA y España son los tres países con más energía eólica instalada del mundo.
+
+Expertos internacionales del clima y el medio ambiente han llegado a la siguiente conclusión: la tierra se calienta, y los recursos se acaban. Además. las centrales eléctricas de los 60 y 70 van a tener que reemplazarse, todo esto con una situación política y económica diferente a la de entonces. Ya no podemo seguir ignorando los problemas medioambientales que nos rodean. Las grandes potencias parecen darse cuenta, y la cantidad de partículas de CO2 emitidas se está empezando a reducir. La probabilidad de que las energías renovables sigan su proceso de ascenso es cada vez mayor, por lo que el sector de la energía eólica tiene todas las papeletas para tener su futuro asegurado. 
+
+\clearpage
+
+\subsection{La energía solar}
+
+En la misma época el científico suizo Horace-Bénédict de Saussure (1740 – 1799) inventó lo que se considera el predecesor de los colectores actuales. Aún así, la utilización de éstos para generar calor no se desarrolló hasta los años setenta del siglo pasado. Alguien que realmente fue importante para el avance de la energía solar fue Augustin Mouchot (1825 – 1912), desarrollando en el año 1868 los primeros sensores solares. Tras ello, serían muchos los que seguirían sus pasos, siendo especialmente destacables John Ericsson, que en 1870 diseñó un colector parabólico que se ha seguido usando durante más de 100 años, y Aubrey Eneas, quien fundó la primera empresa de energía solar en 1900, \emph{“The Solar Motor Co”}.
+
+En 1878, durante la Exposición Universal que tiene lugar en París, Augustin Mouchot, profesor de matemáticas, presentó un receptor solar de $ 20 m^{2} $ y obtuvo la medalla de oro. Este antiguo maestro estaba convencido de que el carbón como recurso iba a agotarse y que el Sol sería la energía del futuro. Cuatro años después el ingeniero Abel Pifre, utilizó un concentrador solar del mismo tipo para activar una máquina de vapor que permitía imprimir un periódico. En el año 1891, Clarence Kemp inventó y patentó el calentador solar, origen del agua caliente sanitaria. Utilizó un tanque de agua pintado de negro en el interior de una caja provista de un vidrio. De esta forma, el calor generado calentaba el agua de forma suficiente como para poder bañarse.
+
+Pero ninguno de todos los personajes de la historia de la energía solar fue tan ambicioso como Frank Schuman (1862 – 1918). Schuman fundó en 1911 su empresa \emph{“Sun Power Co”}, creando su primera planta solar en Tancony, Estados Unidos, en 1911, generando un total de 20kW. Tras ello, abrió su siguiente planta solar en Maadi, Egipto, en 1912, consiguiendo generar 88kW.
+
+El auténtico desarrollo de la energía solar térmica se produce a partir de los años 70 del siglo pasado. En el año 1973 se produjo la guerra de los seis días, cuando Israel recibió un ataque por parte de la República Árabe Unida. Invadió territorios de sus vecinos árabes con armas suministradas por Estados Unidos. Esta acción indignó a los países árabes productores de petróleo, que en represalia comenzaron el bloqueo de la OPEP\footnote{Organización de Países Exportadores de Petróleo.}. Se produjo un embargo petróleo a todas aquellas naciones que habían decidido apoyar a Israel.
+
+Aunque tan solo duró seis meses, supuso una importante crisis. Ya que la economía global dependía en gran medida del petróleo suministrado por Oriente Medio. Los precios del crudo subieron de forma abrupta, llegando a incrementarse en un 300\% con respecto al normal. Esto motivo que muchos países occidentales que son dependientes del petróleo decidieran dar un impulso a otras fuentes de energía, entre ellas las renovables, y dentro de estas al aprovechamiento solar mediante las placas soleres térmicas.
+
+La historia de la energía solar fotovoltaica está marcada por el desarrollo tecnológico de una forma lenta pero segura. El efecto fotovoltaico fue descubierto por el físico francés Alexandre Edmond Bequerel en 1838. Mientras experimentaba con baterías de material galvánico observó que el voltaje aumentaba cuando había radiación solar. A pesar de ello, no pudo explicar el fenómeno en aquellos tiempos, si no que fue Albert Einstein quien descubrió el trasfondo físico del efecto fotoeléctrico en 1905. A partir de aquí, numerosos descubrimientos propios del sector han ido impulsando el desarrollo de esta tecnología hasta nuestros días.
+
+Las predecesoras de las placas fotovoltaicas actuales las desarrolló Charles Fritts en 1883. Fue él quien asentó las bases para la investigación futura del efecto fotoeléctrico. Las células solares basadas en el Silicio son relativamente nuevas. En 1954 una investigación del equipo de los laboratorios de la corporación Bell (fundada por Alexander Graham Bell), con los especialistas Calvin Fuller, Daryl Chapin y Gerald Pearson desarrollaron la primera célula solar con un coeficiente de rendimiento del 6\%. Los siguientes desarrollos de las placas fotovoltaicas están muy relacionados con la tecnología espacial.
+
+\subsubsection{Tipos de energía solar}
+
+\paragraph{Fotovoltaica:}
+
+La placa fotovoltaica o también conocida como captador solar fotovoltaico es el que conocemos para la generación de electricidad y que gracias al decreto ley de finales del año 2018, por el que se suprimía el llamado \emph{"impuesto al sol"} vuelve a ponerse de moda. Los paneles o módulos fotovoltaicos están formados por un conjunto de células fotovoltaicas que producen electricidad a partir de la luz que incide sobre ellos mediante el efecto fotoeléctrico. Su funcionamiento se rige por los siguientes principios físicos. Algunos de los fotones, provenientes de los rayos del sol, impactan sobre la primera superficie del panel, siendo absorbidos por diversos semiconductores, como puede ser el silicio. Los electrones que se alojan en la estructura del silicio son golpeados por los fotones, liberándose de los átomos a los que principalmente estaban destinados. El movimiento de esto electrones es lo que conocemos como corriente eléctrica, que es generada en forma “continua”, también llamada DC, y que debemos transformar a “alterna” para poder usarla en nuestras casas
+
+\paragraph{Térmica:}
+
+El panel solar térmico o captador solar es un dispositivo que capta la energía de la radiación solar para su aprovechamiento en calefacción o agua caliente sanitaria. Su funcionamiento es muy sencillo, y consiste en hacer pasar un líquido con propiedades anticongelantes por su interior. En su recorrido por el interior del captador, este líquido, también llamado glicol, va aumentando su temperatura gracias a la incidencia de los rayos del sol y a la configuración de los propios paneles, que potencian la acumulación de calor. Una vez fuera del captador, el glicol cederá ese calor al agua sanitaria o para la calefacción, mediante intercambiadores individuales, o dentro de acumuladores de agua.
+
+\paragraph{Solar pasiva:}
+
+La energía solar pasiva es un conjunto de técnicas constructiva que potencia el aprovechamiento directo de la energía solar a través de la propia construcción del edificio. Estas permitirán la transformación del calor obtenido sin tener que recurrir a otros dispositivos, como podrían ser las calderas o los calentadores.
+
+
+\begin{table}[h]
+\begin{center}
+
+\begin{tabular}{|m{0.25\linewidth}|m{0.25\linewidth}|m{0.25\linewidth}|}
+\hline 
+\textbf{Aire acondicionado solar.} & \textbf{Termoeléctrica.} & \textbf{Solar híbrida.} \\ 
+\hline 
+Utiliza energías renovables. & Utiliza energías renovables. & Utiliza energías renovables. \\ 
+\hline 
+Instalación no invasiva. Tan solo necesitamos un espacio en nuestra vivienda para poder ubicar los paneles solares. & Genera electricidad a partir de vapor de agua en las centrales termosolares & Genera electricidad y agua caliente. \\ 
+\hline 
+Energía limpia y gratuita. Tan solo necesitamos del calor del sol para poder activar el funcionamiento del aire acondicionado solar. & Instalaciones industriales, para abastecer a pequeñas ciudades o agrupaciones de industrias. & Para instalaciones individuales o edificios públicos. \\ 
+\hline 
+Ahorro económico, es una manera idónea de aprovechar los rayos solares y reducir así el consumo eléctrico para el aire acondicionado. & Uso de espejos. Consiste en concentrar la luz solar mediante espejos, sobre una torre central. & Composición doble, por una capa de células fotovoltaicas y debajo un circuito de tuberías para agua. \\ 
+\hline 
+\end{tabular} 
+
+\caption{Otras aplicaciones de la energía solar.}
+\label{otras_ap_solar}
+\end{center}
+\end{table}
+
+
+\subsection{Energía hidráulica}
+
+El uso de la energía hidráulica no es nada nuevo y se remonta a más de 2000 años atrás, pero se desarrolló lentamente durante alrededor de 18 siglos, debido al inconveniente de que las instalaciones deberían situarse junto a los ríos; mientras que las maquinas de vapor se podían instalar en cualquier lado. Al evolucionar la tecnología de la transmisión eléctrica, está permitió el gran desarrollo de las plantas hidroeléctricas y, por consiguiente, de las turbinas hidráulicas.
+
+En este nuevo esquema de transformación de energías: energía hidráulica, las ruedas hidráulicas el agua entra y actúa únicamente en parte de la circunferencia no así en las turbinas en las cuales el agua lo hace en toda la circunferencia- tienen dos desventajas fundamentales: rendimiento bajo y velocidad de rotación muy lenta (4 a 10 rpm). Las turbinas hidráulicas nacieron para superar estas desventajas y su evolución ha sido el aumento cada vez mayor de la velocidad de rotación y de su eficiencia con el fin de conseguir potencias específicas más altas, lo que permite generación eléctrica a más bajo costo.
+
+El estudio de las turbomáquinas hidráulicas como ciencia no se crea hasta que Euler en 1754 publica su famosa memoria de Berlín sobre maquinaria hidráulica en la que expone su teoría de las máquinas de reacción. En esta memoria desarrolla Euler por vez primera la ecuación fundamental de las turbo máquinas. 
+
+Posteriormente el ingeniero francés Claude Burdin 1850, desarrollo la "Teoría de turbinas hidráulicas o máquina rotativa a gran velocidad, donde acuña por vez primera la palabra 'turbina' para el vocabulario. Burdin fue un ingeniero teórico, pero su discípulo Fourneyron,fue un ingeniero práctico, y logró en 1827 construir la primera turbina hidráulica experimental digna de tal nombre, más aún, a lo largo de su vida, Fourneyron construyó un centenar más de turbinas hidráulicas para diferentes partes del mundo. Esta turbina que tuvo un éxito clamoroso, porque era capaz de explotar saltos mayores que los explotables con las antiguas ruedas hidráulicas, era radial centrífuga, de inyección total y escape libre; aunque Fourneyron previó también el tubo de aspiración, cuyo estudio realizó él mismo. Desde 1837 las turbinas hidráulicas de Henschel y Jonval compiten con las de Fourneyron. Otras turbinas hidráulicas anteriores al siglo XX fueron la de Fontaine y sobre todo la desarrollada en 1851 por Girard, que era de acción e inyección total y que alcanzó una notable difusión en Europa. Los tipos mencionados no son los únicos y, aunque algunas de estas turbinas han logrado sobrevivir y aún siguen en funcionamiento, han dejado de construirse por las razones siguientes:
+
+\begin{enumerate}
+
+	\item Rendimiento bajo sobre todo en cargas parciales de (70-75\% a plena carga hasta 50-55\% a 50\% de la carga).
+	\item Velocidad de giro muy reducida y, como consecuencia.
+	\item Potencia por unidad muy baja.
+	
+\end{enumerate}
+
+en la actualidad La energía hidroeléctrica sigue siendo la energía renovable más utilizada en todo el mundo. Se estima que un 20\% de la energía consumida en el mundo tiene origen hidroeléctrico, mientras que en los países en desarrollo este porcentaje se eleva hasta el 33\%. Si se compara con otras energías renovables los datos son contundentes: del total de la producción renovable mundial, un 90\% tiene su origen en la hidrogeneración.
+
+Se trata, además de una energía en crecimiento especialmente en las áreas menos desarrolladas. Según la UNESCO\footnote{Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura.}, entre 1995 y 2010 la producción de energía hidroeléctrica habrá crecido en un 65\% en todo el mundo, siendo este aumento especialmente agudo en los países del América Latina, Asia y África. Mientras que en estas regiones tan solo se aprovecha el 7\% de su potencial hidroeléctrica, en áreas más desarrolladas, como Europa, este porcentaje asciende al 75\%, por lo que el crecimiento esperado en los países en vías de desarrollo es elevado.
+
+Se trata, por tanto, de un sistema de generación de energía extendido en todo el mundo, incluso en países que no cuentan con desniveles orográficos significativos, como es el caso de Holanda. En la actualidad, Canadá, Estados Unidos y China son los mayores productores del mundo.
+
+\clearpage
+
+\subsection{Biomasa y biogás}
+
+Los  residuos orgánicos de origen vegetal o animal obtenidos en procesos naturales o industriales, lo que se conoce como biomasa. La energía que contiene la biomasa es energía solar almacenada gracias al proceso de fotosíntesis de las plantas, que después es recuperada por combustión directa \emph{(obteniendo energía térmica o eléctrica)} o transformando esa materia en biocombustibles \emph{(bioalcohol, biogas, biodiesel o bioaceite)} para obtener energía mecánica.
+
+\paragraph{La biomasa puede ser:}
+Natural, la que produce la naturaleza; residual, la que genera la actividad humana; o producida, que es aquella cultivada con el propósito de obtener biomasa con fines energéticos.  Son fuentes de biomasa los residuos agrarios y alimentarios; los residuos animales (estiércol, restos de mataderos, etc); los residuos industriales (madera, papel, etc) y hasta los residuos sólidos urbanos.
+
+En función de la energía a obtener, se somete a la biomasa a distintos procesos físicos y/o químicos: mediante la combustión directa se obtienen energía térmica que puede servir de calefacción o se puede producir vapor con el que generar electricidad previa acción de una turbina y un alternador; también se puede recurrir a la combustión sin oxígeno (pirolisis), que descompone la biomasa, o a la oxigenación o hidrogenación, para obtener hidrocarburos; mediante la fermentación se puede transformar la glucosa es etanol, bioalcohol que así mismo sirve de combustible; por su parte, la fermentación sin oxígeno (fermentación anaerobia) origina, biogases que se utilizan en motores de combustión o como calefacción; a través de procesos químicos no biológicos (donde no intervienen microorganismos) se pueden transformar aceites vegetales y grasas animales en una biodiesel, que sirve de combustible; etc.
+
+El papel de la biomasa como fuente de energía puede contribuir a resolver el problema energético, así como a disminuir la dependencia energética y la contaminación. En Brasil, hay ya dos millones de vehículos que se mueven con bioalcohol obtenido de la caña de azúcar, y ocho millones más que mezclan gasolina con alcohol. Pero aún debe consolidares un mercado del recurso de biomasa, así como resolver la logística de la adecuación al uso energético y establecer las bases regulatorias de ese mercado.
+
+\subsection{Energía geotérmica}
+
+La utilización directa como fuente de calor de la energía geotérmica constituye la forma más antigua, versátil y también la más común de aprovechamiento de esta forma renovable de energía. Los datos disponibles indican que, a finales del año 2009, el número de países que hacían uso de la misma con el fin citado era de 78, con una capacidad instalada de $50.583 MWt$. Esta última cifra representa un crecimiento del 78,9\% respecto a los datos de 2005, lo que significa un incremento anual medio del 12,33\%, con un factor de capacidad de 0,27 (equivalente a 2.365 horas de operación a plena carga al año). La energía térmica utilizada fue de $121.696 \dfrac{GWh}{year}$ ($438.071 \dfrac{TJ}{year}$), lo que significa un 60,2\% más que en 2005 (9,9\% de incremento anual). Ello supuso un ahorro energético por año estimado de 307,8 millones de barriles de petróleo (46,2 millones de toneladas), así como un ahorro de emisiones de 148,2 millones de toneladas de CO2 (comparado con el empleo de petróleo para generar electricidad). La bomba de calor geotérmica representó el 49\% de los usos térmicos de esta energía, mientras que el 24,9\% se destinó a usos balnearios y de calentamiento de piscinas y un 14,4\% a la calefacción de recintos. La Figura 4.1 refleja con mayor detalle esta distribución por usos térmicos. 
+
+\subsection{Energía mareomotriz}
+
+Desde tiempos inmemoriales, el hombre ha tratado de entender –y dominar– el movimiento de las mareas. En relación directa con los ciclos lunares, que también rigen el calendario de cosecha, la actividad de los peces e, incluso, el humor de las personas, las mareas encierran una potencialidad enorme en la producción de energía.
+La energía mareomotriz ha demostrado ser una fuente de suministro eléctrico viable en aquellas zonas costeras caracterizadas por grandes crecidas y retracciones del mar. La clave está en aprovechar la diferencia que diariamente se da en el nivel de las mareas. El mecanismo básico consiste en almacenar agua en el momento de marea alta y liberarla posteriormente durante la bajamar, de manera de activar a su paso las turbinas generadoras de electricidad. Para que la potencia pueda ser aprovechada de manera eficiente, es necesario que la amplitud de las mareas sea de al menos cinco metros y que exista un golfo que permita el almacenamiento del agua durante la pleamar (marea alta).
+Sin embargo, un nuevo diseño de planta mareomotriz patentado por el argentino Patricio Bilancioni promete llevar esta tecnología a un nuevo estadío, con menos impacto ambiental y mayores posibilidades en la generación de energía.
+Aunque todavía no abundan los estudios en esta materia, el trabajo “Les realisations de Electricitéen France concernant l’energie mareomotrice”, del francés René Bonefille, estima que la energía mareomotriz podría aportar anualmente a nivel mundial unos 635.000 gigavatios por hora $\dfrac{Gw}{h}$, lo que equivale a 1045 millones de barriles de petróleo o 392 millones de toneladas de carbón. Las áreas con mejores condiciones para la instalación de este tipo de centrales eléctricas se encuentran en el litoral atlántico canadiense, en la regiones costeras francesas de Bretaña y Baja Normandía, en el sudoeste de Inglaterra, en el Mar Blanco –al noroeste de Rusia–, en el Mar de Ojostk –al este de Rusia– y en la franja costera de la Patagonia argentina, particularmente en el litoral marítimo de Chubut y Santa Cruz.
+
+%******************************************************************************************
+
+Uno de los cuestionamientos que se le hace a la tecnología tradicional de energía mareomotriz es que puede tener un alto impacto en la fauna y flora marina donde se instala. De la misma manera en que las turbinas de las centrales hidroeléctricas afectan el ritmo biológico de los ríos donde se encuentran, las centrales mareomotrices de gran porte pueden hacerlo también. Sin embargo, el “Sistema de generación de energías en base a las mareas oceánicas”, patentado por Patricio Bilancioni ante el Instituto de la Propiedad Industrial (INPI), presenta innovaciones que dan a la energía mareomotriz un alcance mucho mayor al que tenía.
+
+En primer lugar, el sistema de Bilancioni no requiere de turbinas, por lo que el impacto en la fauna y flora marina se ve reducido de manera casi total. Por otro lado, puede funcionar las 24 horas del día y no requiere de combustibles para ponerlo en marcha. Es un sistema ciento por ciento ecológico.
+
+\emph{“La otra ventaja es que trabaja en tierra firme, se puede colocar en cualquier sitio de la costa y no necesita ningún accidente costero especial, como ser una bahía o ensenada”}, explica Patricio Bilancioni sobre su sistema. “Solamente se necesitan ciertas diferencias de altura en pleamar y bajamar. Esta ubicuidad permite instalarlo en las cercanías de un pueblo, teniendo en cuenta además que no produce contaminación. No necesita interconexión si está cerca de la ciudad y las ventajas son similares con el resto de las energías renovables como la eólica, la solar”, agrega Bilancioni.
+El funcionamiento del sistema es así: una cámara se llena con el agua del mar. A esa cámara están conectadas tres o más cubas, y cada una de las cubas está montada sobre cilindros oleohidráulicos. Entonces, cuando en pleamar se llena el reservorio con agua, se carga una cuba y, por acción de su propio peso, comienza a descender. Ese movimiento descendente pone en acción al cilindro oleohidráulico, cuya presión se transmite a un motor oleohidráulico que moviliza el generador. Ahí, la energía.
+
+Ahora bien, en paralelo, utilizando una mínima parte del caudal oleohidráulico puesto en movimiento con el descenso de la primera cuba, otra cuba gemela (la segunda) sube hasta poder ser cargada desde el reservorio. Mientras tanto, el contenido de agua de la primera cuba se descarga en un depósito inferior que vuelca su contenido al mar en el momento indicado (en bajamar). El procedimiento se repite con la cantidad de cubas que se desee instalar. Las cubas pueden ser de diferente tamaño de acuerdo a la cantidad de energía que se quiera obtener. El movimiento vertical de los cilindros oleohidráulicos es constante durante todo el día. En la figura 1 se esquematiza de manera simplificada el funcionamiento de ascenso y descenso de las cubas, y en la figura 2, el diseño de una planta.
+
+Pero lo revolucionario del sistema patentado por Patricio Bilancioni no termina allí. También puede ser utilizado en cursos fluviales, adaptando la escala de potencias y contemplando las máximas y mínimas posibles crecidas o bajantes de los cauces. De hecho, presenta varias ventajas en comparación a la tecnología de generación eléctrica hídrica, ya que no genera impactos ambientales, como ser alteración de corrientes y olas; alteración de los substratos basales, transporte y deposición de sedimentos; alteración de hábitats bentónicos; ruido; incidencia de campos electromagnéticos; toxicidad química; interferencia con la movilidad y migración de las especies animales; obstrucción física; entre otros.
+
+En ese sentido, este sistema tiene una alta escalabilidad y se adapta a diferentes localizaciones tanto en el ámbito marítimo como fluvial. Por otra parte, cumple con los requisitos para poder ser utilizado en la Generación Distribuida de energía y se diferencia de otros actualmente en uso (fotovoltaicos, eólicos, etc.) por su menor costo, ya que utiliza elementos tecnológicos estándar y de amplia oferta en el mercado. Además, su mantenimiento es simple: gracias a su planteo en módulos (cada cuba), es posible realizarlo sin tener que dejar de operar la totalidad del generador, trabajando únicamente sobre el módulo a reparar. Esto, además de asegurar un funcionamiento ininterrumpido, abarata los costos de mantenimiento.
+Por último, esta tecnología tiene la potencialidad para conectarse con otros sistemas para potenciar el trabajo con el recurso hídrico, como sistemas de desalinización y potabilización de agua, o sistemas de producción de hidrógeno.
+
+En resumen, los sistemas de producción de energía mareomotriz, actualizados con las últimas innovaciones en la materia, prometen una revolución en el campo de las energías renovables. Las facilidades geográficas que presenta el territorio argentino, sumado a la alta capacidad de sus técnicos, permiten pensar en un futuro muy promisorio en este campo.
+
+\subsection{Energía undimotriz u olamotriz}
+
+La energía undimotriz se encuentra en una etapa inicial de desarrollo por lo que aún es difícil estimar cómo progresará con el paso de los años. Esta incertidumbre tiene su origen en el desconocimiento en relación a temas como el comportamiento del oleaje, la transmisión de energía y vida útil de los dispositivos, que dependen de una mantención difícil de realizar debido a la profundidad en la que se pueden ubicar, y del deterioro de los dispositivos por el ambiente salino y el crecimiento de organismos marinos sobre estructuras undimotrices.
+
+Sin embargo, esta tecnología es una opción de energía renovable ya que no genera emisiones al aire ni descargas al agua. El oleaje tiene un funcionamiento relativamente predecible por lo que es posible tener un mayor manejo del recurso, logrando una conversión continua de energía renovable.
+
+Una manera de diferenciar los variados tipos de tecnologías en desarrollo que aprovechan esta energía es por su ubicación en el mar. Existen las centrales fijas, ubicadas en el borde costero donde se aprovecha la oscilación del oleaje que produce cambios de presión en el aire situado sobre el agua. Esto hace que se expanda y comprima, aprovechándose en el movimiento de una turbina.
+
+También están las centrales de agua poco profunda, sistema similar al anterior, pero que se instala a un máximo de 500 metros de distancia de la costa, con profundidades que van desde los 10 a los 30 metros. Esta ubicación es más efectiva por el mayor potencial del oleaje.
+
+Por último, están las centrales ubicadas en aguas profundas a más de 50 metros, incrementando el potencial de energía producida.
+
+Si bien existen diversos tipos de instalaciones, las más destacadas son las de elementos articulados que se mueven junto a las olas, transformando la energía a través de bombas y/o generadores eléctricos lineales; y las de rampla que aprovechan la caída del agua para generar electricidad.
+
+
+%------------------------------Parte 2-----------------------------------------
+
+\section{Los dispositivos de potencia}
+
+Los semiconductores de potencia desempeñan una función importante en la conversión energética de una amplia gama de dispositivos electrónicos comunes, como teléfonos inteligentes, ordenadores, sistemas fotovoltaicos y vehículos eléctricos. La popularidad en todos los sentidos de estos semiconductores invita a que la comunidad científica trabaje en aumentar su eficacia energética y rentabilidad.
+
+En el proyecto PowerBase, financiado en parte con fondos europeos y compuesto por treinta y nueve socios de nueve países europeos, se han dado importantes pasos para lograrlo. La financiación de PowerBase también ha contribuido al desarrollo de una nueva tecnología de sustrato de nitruro de galio (GaN) con la que los dispositivos eléctricos podrán funcionar a más de seiscientos cincuenta voltios. Este logro se anunció recientemente en un centro internacional de investigación, desarrollo e innovación de Bélgica y una fabricantes de semiconductores estadounidense sin plantas de producción propia. Su labor conjunta impulsó el desarrollo de semiconductores de potencia más eficientes.
+
+La eficacia energética de estos nuevos dispositivos se debe al GaN, una tecnología con mucho futuro en las aplicaciones de semiconductores de potencia. El calor que generan las pérdidas de energía es un efecto secundario importante en electrónica. Los dispositivos y circuitos electrónicos generan calor cuando funcionan. Cuanto más y más rápido funcionan, más calor residual crean, lo cual merma el rendimiento y provoca que fallen antes de tiempo. El GaN, gracias a su resistencia a fallos y velocidad de conmutación mayores, podría reducir las pérdidas de energía durante los procesos de conversión energética.
+
+Hasta ahora, la tecnología de GaN sobre silicio se ha utilizado en dispositivos de potencia de GaN comerciales que funcionan en hasta seiscientos cincuenta voltios y con capas intermedias de doscientos milímetros entre el dispositivo de GaN y el sustrato de silicio. No obstante, para aplicaciones como la energía renovable o los vehículos eléctricos, que precisan funcionar a más de seiscientos cincuenta voltios, los dispositivos de potencia basados en GaN no son ideales.
+
+La dificultad estriba en aumentar el grosor de la oblea, la cual se basa en nitruro de aluminio y galio (AlGaN), al nivel necesario para lograr un mayor perforación y menos fugas. Esto se produce por la descompensación existente entre el coeficiente de dilatación térmica entre las capas epitaxiales de GaN/AlGaN y el sustrato de silicio. Dicho de otro modo, ambas partes se expanden a distinta velocidad cuando cambia la temperatura. Si bien usar sustratos de silicio más gruesos es una de las formas de evitar que las obleas se deformen y ondulen a novecientos voltios o más, esto provoca otros problemas como la pérdida de resistencia mecánica e inconvenientes adicionales de compatibilidad en algunas herramientas de procesamiento.
+
+Este problema se resolvió mediante el desarrollo de dispositivos de potencia p-GaN con modo mejorado de alto rendimiento sobre sustratos de doscientos milímetros con coeficientes de dilatación térmica correspondientes. La expansión térmica de los sustratos se asemeja en gran medida a la de las capas epitaxiales de GAN/AlGaN. De este modo se sienta la base para crear dispositivos de potencia con obleas de novecientos a mil doscientos voltios y más sobre grosores estándar de doscientos milímetros, lo cual abre la puerta a una serie de aplicaciones nuevas e interesantes.
+
+PowerBase (Enhanced substrates and GaN pilot lines enabling compact power applications) ya está llegando a su fin, pero su trabajo ha logrado mejorar las tecnologías de semiconductores de potencia modernas. Para lograrlo se dedicó a crear una línea piloto con tecnología de banda prohibida ancha de GaN y a ampliar los límites de los materiales de sustrato de silicio modernos utilizados en los semiconductores de potencia. Otros logros incluyeron la introducción de tecnologías de empaquetado avanzadas a partir de una línea piloto de empotrado de chips y la demostración del potencial de innovación en cuanto a dispositivos de potencia compactos.
+
+\clearpage
+%------------------------------Parte 3-----------------------------------------
+
+\section{Los componentes de potencia de SiC y GaN para abordar los requisitos de diseño de los EV}
+
+Los fabricantes de automóviles desarrollan cada vez más EV (vehículos eléctricos), pero el corto rango de conducción sigue siendo un problema. Si bien el diseño aerodinámico, los materiales más livianos y el uso más eficiente de la energía ayudan, no es suficiente. Los diseñadores de dispositivos electrónicos automotrices deben usar materiales avanzados de semiconductores de WBG (brecha de banda ancha) para cumplir con los requisitos de eficiencia y densidad de potencia.
+
+Compuestos principalmente de GaN (nitruro de galio) y SiC (carburo de silicio), estos materiales representan una mejora con respecto a las tecnologías de semiconductores tradicionales, como los MOSFET\footnote{El transistor de efecto de campo metal-óxido-semiconductor o MOSFET es un transistor utilizado para amplificar o conmutar señales electrónicas.} (transistores bipolares de puerta aislada de silicio [Si]) y los IGBT (transistores bipolares de puerta aislada), ya que ofrecen menos pérdidas, mayores frecuencias de conmutación, mayor temperatura de funcionamiento, resistencia en ambientes hostiles y altos voltajes de ruptura. Son particularmente útiles, ya que la industria avanza hacia baterías de mayor capacidad que funcionan a altos voltajes con tiempos de carga más cortos y pérdidas generales reducidas.
+
+\clearpage
+
+%------------------------------Bibliografía-----------------------------------------
+
+\begin{thebibliography}{99}
+
+	\bibitem{} Breve historia de la relación entre ser humano y energía. (2017, mayo 16). LatinClima. \url{https://latinclima.org/energia-verde-e-inclusiva/breve-historia-de-la-relacion-entre-ser-humano-y-energia}
+
+	\bibitem{} De biomasa o bioenergía - Descubre La Energia. (s/f). Recuperado el 28 de febrero de 2021, de \url{https://descubrelaenergia.fundaciondescubre.es/las-fuentes/de-biomasa/}
+	
+	\bibitem{} Dispositivos de potencia mejores abren el camino a aplicaciones de alta tensión | News | CORDIS | European Commission. (s/f). Recuperado el 28 de febrero de 2021, de \url{https://cordis.europa.eu/article/id/123333-enhanced-power-devices-open-the-way-for-highvoltage-applications/es}
+	
+	\bibitem{} Electrónica de potencia aplicada a la smart grid • SMARTGRIDSINFO. (s/f). SMARTGRIDSINFO. Recuperado el 28 de febrero de 2021, de \url{https://www.smartgridsinfo.es/comunicaciones/comunicacion-electronica-potencia-aplicada-smart-grid}
+	
+	\bibitem{} Energía eólica: relevancia, historia y evaluación de la energía eólica. (s/f). Recuperado el 28 de febrero de 2021, de \url{https://www.ammonit.com/es/informacion-eolica/energia-eolica}
+	
+	\bibitem{} ENERGÍA MAREOMOTRIZ - HISTORIA Y FUTURO DE UNA DE LAS “RENOVABLES” QUE MÁS PROMETEN. (2019, septiembre 22). Energía en Movimiento. \url{https://energiaenmovimiento.com.ar/energia-mareomotriz-historia-y-futuro-de-una-de-las-renovables-que-mas-prometen/}
+	
+	\bibitem{} Energía undimotriz - aprendeconenergia. (s/f). Recuperado el 28 de febrero de 2021, de \url{https://www.aprendeconenergia.cl/energia-undimotriz/}
+	
+	\bibitem{} Evaluación del potencial de energía geotérmica. (s/f). 236.
+	
+	\bibitem{} EVOLUCION DE LA TECNOLOGIA HIDRAULICA COMO FUENTE DE ENERGIA RENOVABLE - SEMILLERO ENERGÍAS RENOVABLES. (s/f). Recuperado el 28 de febrero de 2021, de \url{https://sites.google.com/site/semillerofisicauisbca/energia-hidraulica/evolucion-de-la-tecnologia-hidraulica-como-fuente-de-energia-renovable}
+	
+	\bibitem{} Historia de la electrónica de potencia timeline. (s/f). Timetoast. Recuperado el 23 de febrero de 2021, de \url{https://www.timetoast.com/timelines/historia-de-la-electronica-de-potencia-7b3ab0bb-97da-46cc-b614-3e2362fcac8c}
+	
+	\bibitem{} Historia de la energía solar. (s/f). Recuperado el 28 de febrero de 2021, de \url{https://www.hogarsense.es/energia-solar/historia-energia-solar}
+	
+	\bibitem{} Historia de la energía solar, evolución desde la antigüedad. (s/f). Recuperado el 28 de febrero de 2021, de \url{https://solar-energia.net/que-es-energia-solar/historia}
+	
+	\bibitem{} La importancia de las energías renovables | ACCIONA | BUSINESS AS UNUSUAL. (s/f). Recuperado el 28 de febrero de 2021, de \url{https://www.acciona.com/es/energias-renovables/}
+	
+	\bibitem{} potencia, E. de. (s/f). Electrónica de potencia - EcuRed. Recuperado el 28 de febrero de 2021, de \url{https://www.ecured.cu/Electr\%C3\%B3nica_de_potencia}
+	
+	\bibitem{} (R)evolución en la energía renovable. (2019, diciembre 6). La Vanguardia. \url{https://www.lavanguardia.com/natural/20191207/472041300788/cumbre-clima-madrid-transicion-energetica-evolucion-energia-renovable.html}
+	
+	\bibitem{} SCP EXPLICADO. (2016). Notas al pie de página en textos académicos y de investigación UPV. \url{https://www.youtube.com/watch?v=MvkxLlXxkg4&ab_channel=UniversitatPolit\%C3\%A8cnicadeVal\%C3\%A8ncia-UPV}
+	
+	\bibitem{} Sistema Ward-Leonard. (2020). En Wikipedia, la enciclopedia libre. \url{https://es.wikipedia.org/w/index.php?title=Sistema_Ward-Leonard&oldid=125120436}
+	
+	\bibitem{} Tecnología de Energía Solar. (s/f). Recuperado el 28 de febrero de 2021, de \url{https://www.idat.edu.pe/blog/tecnologia-de-energia-solar}
+	
+	\bibitem{} Utilice los componentes de potencia de SiC y GaN para abordar los requisitos de diseño de los EV. (s/f). Recuperado el 28 de febrero de 2021, de \url{https://www.digikey.com/es/articles/use-sic-and-gan-power-components-ev-design-requirements}
+
+\end{thebibliography}
+
+
+
+\end{document}

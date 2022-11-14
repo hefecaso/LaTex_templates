@@ -1,0 +1,132 @@
+%Autor: Héctor Fernando Carrera Soto
+%Correo: hfcarrerasoto.usac@gmail.com
+%Universidad de San Carlos
+%Ingeniería electrónica
+
+\documentclass[12pt,letterpaper, xcolor=dvipsnames]{beamer}
+
+%Para cambiar de color, agregamos a \documentclass[xcolor=dvipsnames]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+%Aquí escogemos el tipo de tema para la presentación
+\usetheme{Madrid}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Seleccionar colores opción 1%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Usamos el siguiente comando para cambiar de colores \usecolortheme[named=Black]{structure}
+
+
+%Lo podemos quitar para dejar los colores predefinidos
+
+%\usecolortheme[named=BlueGreen]{structure}
+
+
+%%%%%%%%%%%%%%%%%%%%
+%Usando mezcla RGB:%
+%%%%%%%%%%%%%%%%%%%%
+
+\useoutertheme{miniframes} % Alternatively: miniframes, infolines, split
+\useinnertheme{circles}
+
+\definecolor{UBCblue}{rgb}{0.04706, 0.13725, 0.26667} % UBC Blue (primary)
+
+\usecolortheme[named=UBCblue]{structure}
+%\usecolortheme[named=Mahogany]{structure} % Sample dvipsnames color
+
+%%%%%%%%%%%%%%%%%%%%%
+%	Otras opciónes	%
+%%%%%%%%%%%%%%%%%%%%%
+
+%\definecolor{UBCblue}{rgb}{0.04706, 0.13725, 0.26667} % UBC Blue (primary)
+%\definecolor{UBCgrey}{rgb}{0.3686, 0.5255, 0.6235} % UBC Grey (secondary)
+
+%\setbeamercolor{palette primary}{bg=UBCblue,fg=white}
+%\setbeamercolor{palette secondary}{bg=UBCblue,fg=white}
+%\setbeamercolor{palette tertiary}{bg=UBCblue,fg=white}
+%\setbeamercolor{palette quaternary}{bg=UBCblue,fg=white}
+%\setbeamercolor{structure}{fg=UBCblue} % itemize, enumerate, etc
+%\setbeamercolor{section in toc}{fg=UBCblue} % TOC sections
+
+% Override palette coloring with secondary
+%\setbeamercolor{subsection in head/foot}{bg=UBCgrey,fg=white}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%Otras opciones de color%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Para más información ver: https://ramblingacademic.com/2015/12/08/how-to-quickly-overhaul-beamer-colors/
+
+
+%\useoutertheme{miniframes} % Alternatively: miniframes, infolines, split
+%\useinnertheme{circles}
+
+%\definecolor{UBCblue}{rgb}{0.04706, 0.13725, 0.26667} % UBC Blue (primary)
+%\definecolor{UBCgrey}{rgb}{0.3686, 0.5255, 0.6235} % UBC Grey (secondary)
+
+%\setbeamercolor{palette primary}{bg=UBCblue,fg=white}
+%\setbeamercolor{palette secondary}{bg=UBCblue,fg=white}
+%\setbeamercolor{palette tertiary}{bg=UBCblue,fg=white}
+%\setbeamercolor{palette quaternary}{bg=UBCblue,fg=white}
+%\setbeamercolor{structure}{fg=UBCblue} % itemize, enumerate, etc
+%\setbeamercolor{section in toc}{fg=UBCblue} % TOC sections
+
+% Override palette coloring with secondary
+%\setbeamercolor{subsection in head/foot}{bg=UBCgrey,fg=white}
+
+
+
+%-------------------------------------------------------
+
+% Otros estilos en http://www4.ujaen.es/~jmmoreno/latex/clatex2.pdf y temas en http://www.utm.mx/~vero0304/ST/5beamer.pdf
+
+
+%<<<<<<<<< para saltos entre líneas usar \vspace{2cm}>>>>>
+%<<<<<<<<< para colocar url o referencias a url usar \url{http://www.latex-project.org/} o  \href{http://www.latex-project.org/}{latex project}>>>>>>>
+
+%%%%%%%%%%%%%%%%%
+%	Autores		%
+%%%%%%%%%%%%%%%%%
+
+\author{Héctor Fernando Carrera Soto \\ 
+e-mail: \url{Correo@dominio.com}}
+
+\title{Presentación prueba}
+\institute{USAC}
+\date{24 de febrero de 2021}
+
+\begin{document}
+
+%---------------Diapositiva 1----------------------------
+\frame{\titlepage}
+
+
+%---------------Diapositiva 2----------------------------
+
+\begin{frame}{Título 1}
+
+	Aquí va el texto.
+
+	\begin{block}{Texto/Ecuación}
+	Aquí puede ir una definición o una ecuación.
+	\end{block}
+
+\end{frame}
+
+%---------------Diapositiva 2----------------------------
+
+\section{Sección 1}
+\begin{frame}{Título 2}
+
+
+\end{frame}
+
+\end{document}
